@@ -80,13 +80,14 @@ gene set collections: ‘c2’, ‘c6’ and ‘c7’ for [Mus musculus](https:/
 • Interactive report for all results<br><br>
 Before starting the demonstration, you need to install and load the following packages:<br>
 
-> library(HTSanalyzeR2)<br>
-> library(org.Hs.eg.db)<br>
-> library(KEGGREST)<br>
-> library(GO.db)<br>
-> library(igraph)<br>
-> library(TxDb.Hsapiens.UCSC.hg19.knownGene)<br>
-
+```python
+library(HTSanalyzeR2)
+library(org.Hs.eg.db)
+library(KEGGREST)
+library(GO.db)
+library(igraph)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+```
 
 [<i class="fa fa-hand-o-up fa-1x "></i>Top](#top)
 

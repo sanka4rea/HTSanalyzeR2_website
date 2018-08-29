@@ -7,7 +7,7 @@ draft = false
 
 tags = ["caseStudy"]
 
-summary = "hi"
+summary = "This case study uses a time series CRISPR genome-wide drop-out data as a demonstration to perform time series analysis."
 
 [header]
 image = "tutorials/case2.jpg"

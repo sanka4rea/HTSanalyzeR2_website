@@ -7,7 +7,7 @@ draft = false
 
 tags = ["caseStudy"]
 
-summary = "hi"
+summary = "In case if you only have a list of genes and want to do hypergeometric test with gene sets having known functions"
 
 [header]
 image = "tutorials/case3.jpg"

@@ -41,7 +41,7 @@ math = false
 
 ### Online calculate
 
-<iframe src="https://stattrek.com/online-calculator/hypergeometric.aspx" width="1000px" height="1000px" frameborder="0" scrolling="no"> </iframe>
+<iframe src="https://keisan.casio.com/exec/system/1180573201" width="1200px" height="2000px" frameborder="0" scrolling="no"> </iframe>
 
 [<i class="fa fa-hand-o-up fa-1x "></i>Top](#top)
 

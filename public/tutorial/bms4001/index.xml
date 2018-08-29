@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BMS4001:Medical Informatics and Laboratory Management on HTSanalyzeR2</title>
+    <link>/tutorial/bms4001/</link>
+    <description>Recent content in BMS4001:Medical Informatics and Laboratory Management on HTSanalyzeR2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tutorial/bms4001/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>History of Computer</title>
+      <link>/tutorial/bms4001/computer/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/bms4001/computer/</guid>
+      <description>The history of Computer. This part will briefly introduce the history of computer.
+What is computer?  The word ‘Computer‘ is come from the word ‘compute’ which means to calculate. In the the early 17th century, computer is a job position that a person performing mathematical calculation for the company. This position is lately replaced by electronic computer. when the electronic computer are commerically available.  The usage of computer A computer is a electronic machine that help you:</description>
+    </item>
+    
+    <item>
+      <title>History of Internet</title>
+      <link>/tutorial/bms4001/internet/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/bms4001/internet/</guid>
+      <description>The Internet is a worldwide system of interconnected computer networks that use the TCP/IP set of network protocols to reach billions of users. The Internet began as a U.S Department of Defense network to link scientists and university professors around the world..
+A network of networks, today, the Internet serves as a global data communications system that links millions of private, public, academic and business networks via an international telecommunications backbone that consists of various electronic and optical networking technologies.</description>
+    </item>
+    
+    <item>
+      <title>Breast Cancer Risk Assessment Tool</title>
+      <link>/tutorial/bms4001/breast/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/bms4001/breast/</guid>
+      <description>The Breast Cancer Risk Assessment Tool is an interactive tool designed by scientists at the National Cancer Institute (NCI) and the National Surgical Adjuvant Breast and Bowel Project (NSABP) to estimate a woman&amp;rsquo;s risk of developing invasive breast cancer.
+Breast cancer: malignant tumor cells originates from the breast that attacks the nearby healthy tissue, and it can spread outside to the other tissue.
+Breast cancer is fatal, it can spread to the lymph nodes,lungs and brain by metastasis, harm the functions of the organ and progressively loses its function.</description>
+    </item>
+    
+    <item>
+      <title>US CDC FluView Interactive</title>
+      <link>/tutorial/bms4001/us_cdc/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorial/bms4001/us_cdc/</guid>
+      <description>US CDC FluView Interactive. The CDC FluView report provides weekly influenza surveillance information in the United States. These applications were developed to enhance the weekly FluView report by better facilitating communication about influenza with the public health community, clinicians, scientists, and the general public. This series of dynamic visualizations allow any Internet user to access influenza information collected by CDC’s monitoring systems.
+Background  HK is now in the winter surge of influenza.</description>
+    </item>
+    
+  </channel>
+</rss>

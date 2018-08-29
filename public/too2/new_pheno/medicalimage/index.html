@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Table of Contents  Medical Phrnotype Analysis  Clinical Risk Prediction  RICORDO | Researching Interoperability using Core Reference Datasets  Department of Genetics, University of Cambridge, Cambridge, UK  comoRbidity  Clinical Simulation  LMG | Lumbar Model Generator PIPER Child HBM   Magnetic Resonance Imaging (MRI)  DICOM files management  DicomBrowser | DICOM files management : Magnetic resonance imaging MIPAV | Medical Image Processing Analysis and Visualization   Computerized Tomography Scan Imaging (CT)  Phantom Imaging  CTSim | Computed Tomography Simulator  Image Format Management  NiBabel   Nuclear Medicine Imaging  3D Image Reconstruction  STIR | Software for Tomographic Image Reconstruction NiftyPET  Kinetic Analysis  QModeling | Kinetic analysis : Nuclear medicine imaging   Find more tools: OMICTOOLS   Medical Phrnotype Analysis Macroscopic phenotype analysis deals with all tools usefull for describing, identifying or classifying phenotypes at macroscopic scale.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/too2/new_pheno/medicalimage/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/too2/new_pheno/medicalimage/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="CityU-Bioinformatics">
+  <meta property="og:url" content="/too2/new_pheno/medicalimage/">
+  <meta property="og:title" content="Medical Imaging | CityU-Bioinformatics">
+  <meta property="og:description" content="Table of Contents  Medical Phrnotype Analysis  Clinical Risk Prediction  RICORDO | Researching Interoperability using Core Reference Datasets  Department of Genetics, University of Cambridge, Cambridge, UK  comoRbidity  Clinical Simulation  LMG | Lumbar Model Generator PIPER Child HBM   Magnetic Resonance Imaging (MRI)  DICOM files management  DicomBrowser | DICOM files management : Magnetic resonance imaging MIPAV | Medical Image Processing Analysis and Visualization   Computerized Tomography Scan Imaging (CT)  Phantom Imaging  CTSim | Computed Tomography Simulator  Image Format Management  NiBabel   Nuclear Medicine Imaging  3D Image Reconstruction  STIR | Software for Tomographic Image Reconstruction NiftyPET  Kinetic Analysis  QModeling | Kinetic analysis : Nuclear medicine imaging   Find more tools: OMICTOOLS   Medical Phrnotype Analysis Macroscopic phenotype analysis deals with all tools usefull for describing, identifying or classifying phenotypes at macroscopic scale.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Medical Imaging | CityU-Bioinformatics</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CityU-Bioinformatics</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#bioinformatics">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Programming</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/program/r">
+                
+                <span>R Language</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorial/getstart/">
+                
+                <span>Getting Started With R</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorial/bms4001/">
+                
+                <span>BMS4001 tutorials</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Database</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/base2/dna">
+                
+                <span>DNA Databases</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/base2/rna">
+                
+                <span>RNA Databses</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tools</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/too2/genomics">
+                
+                <span>Genomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/epigenomics">
+                
+                <span>Epigenomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/transcriptomics">
+                
+                <span>Transcriptomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/proteomics">
+                
+                <span>Proteomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/metabolomics">
+                
+                <span>Metabolomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/phenomics">
+                
+                <span>Phenomics</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Journals</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/journal/comprehensive">
+                
+                <span>Multidisciplinary</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/specific">
+                
+                <span>Bioinformatics Specific</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/conferences">
+                
+                <span>Conferences</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/server/">
+            
+            <span>Servers</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Medical Imaging</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Medical%20Imaging&amp;url=%2ftoo2%2fnew_pheno%2fmedicalimage%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2ftoo2%2fnew_pheno%2fmedicalimage%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftoo2%2fnew_pheno%2fmedicalimage%2f&amp;title=Medical%20Imaging"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2ftoo2%2fnew_pheno%2fmedicalimage%2f&amp;title=Medical%20Imaging"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Medical%20Imaging&amp;body=%2ftoo2%2fnew_pheno%2fmedicalimage%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<hr />
+
+<p><img src="/img/tools/pheno/medical.jpg"  width="500" height="400" alt="anno" align="center"></p>
+
+<p><span id="top"></span></p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#medical-phrnotype-analysis">Medical Phrnotype Analysis</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-clinical-risk-prediction-font"><font color=#CD5555 face="黑体">Clinical Risk Prediction</font></a>
+<ul>
+<li><a href="#ricordo-researching-interoperability-using-core-reference-datasets">RICORDO | Researching Interoperability using Core Reference Datasets</a></li>
+</ul></li>
+<li><a href="#department-of-genetics-university-of-cambridge-cambridge-uk">Department of Genetics, University of Cambridge, Cambridge, UK</a>
+<ul>
+<li><a href="#comorbidity">comoRbidity</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-clinical-simulation-font"><font color=#CD5555 face="黑体">Clinical Simulation</font></a>
+<ul>
+<li><a href="#lmg-lumbar-model-generator">LMG | Lumbar Model Generator</a></li>
+<li><a href="#piper-child-hbm">PIPER Child HBM</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#magnetic-resonance-imaging-mri">Magnetic Resonance Imaging (MRI)</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-dicom-files-management-font"><font color=#CD5555 face="黑体">DICOM files management</font></a>
+<ul>
+<li><a href="#dicombrowser-dicom-files-management-magnetic-resonance-imaging">DicomBrowser | DICOM files management : Magnetic resonance imaging</a></li>
+<li><a href="#mipav-medical-image-processing-analysis-and-visualization">MIPAV | Medical Image Processing Analysis and Visualization</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#computerized-tomography-scan-imaging-ct">Computerized Tomography Scan Imaging (CT)</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-phantom-imaging-font"><font color=#CD5555 face="黑体">Phantom Imaging</font></a>
+<ul>
+<li><a href="#ctsim-computed-tomography-simulator">CTSim | Computed Tomography Simulator</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-image-format-management-font"><font color=#CD5555 face="黑体">Image Format Management</font></a>
+<ul>
+<li><a href="#nibabel">NiBabel</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#nuclear-medicine-imaging">Nuclear Medicine Imaging</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-3d-image-reconstruction-font"><font color=#CD5555 face="黑体">3D Image Reconstruction</font></a>
+<ul>
+<li><a href="#stir-software-for-tomographic-image-reconstruction">STIR | Software for Tomographic Image Reconstruction</a></li>
+<li><a href="#niftypet">NiftyPET</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-kinetic-analysis-font"><font color=#CD5555 face="黑体">Kinetic Analysis</font></a>
+<ul>
+<li><a href="#qmodeling-kinetic-analysis-nuclear-medicine-imaging">QModeling | Kinetic analysis : Nuclear medicine imaging</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#find-more-tools-omictools-https-omictools-com-phenomics-category">Find more tools: <a href="https://omictools.com/phenomics-category" target="_blank"><strong>OMICTOOLS</strong></a></a></li>
+</ul>
+</nav>
+
+
+<h1 id="medical-phrnotype-analysis">Medical Phrnotype Analysis</h1>
+
+<p><p align="justify"><strong>Macroscopic phenotype analysis</strong> deals with all tools usefull for describing, identifying or classifying phenotypes at macroscopic scale. Macroscopic sample can, for example, be plants or mammalians (human, mouse..) imaged by all kinds of macroscopic devices (from medical imaging to basic digital camera).</p>
+
+<h2 id="font-color-cd5555-face-黑体-clinical-risk-prediction-font"><font color=#CD5555 face="黑体">Clinical Risk Prediction</font></h2>
+
+<p><p align="justify">A risk prediction model aims to predict the probability or risk of a condition or event among individuals, or occasionally groups, based on a combination of known or measured characteristics. Risk prediction tools are the means by which risk prediction models, scores or algorithms are implemented in clinical practice. Numerous risk tools are now available, which predict either current or future risk of a cancer diagnosis. In theory, these tools have the potential to improve patient outcomes through enhancing the consistency and quality of clinical decision-making, facilitating equitable and cost-effective distribution of finite resources and encouraging behaviour change.</p>
+
+<hr />
+
+<h3 id="ricordo-researching-interoperability-using-core-reference-datasets">RICORDO | Researching Interoperability using Core Reference Datasets</h3>
+
+<p><p align="justify">Gathers functions for real-time reasoning over very large ontologies to express complex ontology concepts. RICORDO is designed for biomedical resources, and related ontologies, relevant to a number of communities including the physiology modeling, the pharmacology modeling, and the medical education community. It permits to find and annotate resources with both terms from reference ontologies and composites of those terms.</p>
+
+<p><a href="http://www.ricordo.eu/relevant-resources" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2012 Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/22130590" target="_blank">An infrastructure for ontology-based information systems in biomedicine: RICORDO case study.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>European Bioinformatics Institute, Wellcome Trust Genome Campus, Cambridge, UK;</p>
+
+<h2 id="department-of-genetics-university-of-cambridge-cambridge-uk">Department of Genetics, University of Cambridge, Cambridge, UK</h2>
+
+<h3 id="comorbidity">comoRbidity</h3>
+
+<p><p align="justify">Provides an analysis of disease comorbidities from both the clinical and molecular perspectives. comoRbidity is an R package that leverages from clinical data obtained from electronic health records (EHR) databases or health registries (the clinical comorbidity analysis), and from genotype-phenotype information of the diseases under study (the molecular comorbidity analysis), or provided by the user.</p>
+
+<p><a href="https://bitbucket.org/ibi_group/comorbidity" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2018 Bioinformatics) <a href="https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty315/4979545" target="_blank">comoRbidity: An R package for the systematic analysis of disease comorbidities.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Research Programme on Biomedical Informatics (GRIB), Hospital del Mar Medical Research Institute (IMIM), Department of Experimental and Health Sciences (DCEXS), Universitat Pompeu Fabra (UPF), Barcelona, Spain</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-clinical-simulation-font"><font color=#CD5555 face="黑体">Clinical Simulation</font></h2>
+
+<h3 id="lmg-lumbar-model-generator">LMG | Lumbar Model Generator</h3>
+
+<p><p align="justify">Builds a population of anatomically representative models in a semi-automatic manner. LMG assists users to assess the effects of spinal implants on distinct anatomical features of the spine. It provides surfaces and solid regions that are meshed allowing for direct use in finite-element (FE) models. The models constructed by the tool include the five vertebral bodies (L1–L5) and the four intervertebral discs (IVDs) interposed between them.</p>
+
+<p><a href="https://github.com/CELavecchia/LMG/tree/v1.1" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2018 J R Soc Interface) <a href="https://www.ncbi.nlm.nih.gov/pubmed/29298959" target="_blank">Lumbar model generator: a tool for the automated generation of a parametric scalable model of the lumbar spine.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Mechanical Engineering, University of Birmingham, Birmingham, UK;</p>
+
+<p>Department of Biomechanical Engineering, University of Melbourne, Melbourne, VIC, Australia</p>
+
+<hr />
+
+<h3 id="piper-child-hbm">PIPER Child HBM</h3>
+
+<p><p align="justify">Allows users to perform a series of child accident reconstruction. PIPER Child HBM is an approach combining two methods: (1) the PIPER tool and (2) the PIPER scalable HBM. It enables users to realize computer simulations with human body models (HBMs) of different ages and in different positions. It assists users in the prediction of the injury severity and location for the reconstructions.</p>
+
+<p><a href="https://gitlab.inria.fr/piper/child/tree/master/PIPER_ChildModel_6YO" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 PLoS One) <a href="https://www.ncbi.nlm.nih.gov/pubmed/29135997" target="_blank">Performances of the PIPER scalable child human body model in accident reconstruction.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Division of Neuronic Engineering, School of Technology and Health, KTH Royal Institute of Technology, Stockholm, Sweden</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="magnetic-resonance-imaging-mri">Magnetic Resonance Imaging (MRI)</h1>
+
+<p><p align="justify">Magnetic resonance imaging (MRI) has become firmly established as an essential imaging tool. Two characteristics of MRI&ndash;its ability to image soft tissue and its avoidance of harmful ionizing radiation&ndash;more than compensate for the costs, complexity, safety issues, and patient discomfort associated with it. Today, MRI is the modality of choice for a number of neurological and musculoskeletal indications and is being used for more applications than ever before. <a href="https://www.ncbi.nlm.nih.gov/pubmed/15945465" target="_blank">Source</a></p>
+
+<p><p align="justify">Magnetic resonance imaging (MRI) is a powerful, non-invasive diagnostic medical imaging technique widely used to acquire detailed information about anatomy and function of different organs in the body, in both health and disease. It utilizes electromagnetic fields of three different frequency bands: static magnetic field (SMF), time-varying gradient magnetic fields (GMF) in the kHz range and pulsed radiofrequency fields (RF) in the MHz range. <a href="https://www.ncbi.nlm.nih.gov/pubmed/26041266" target="_blank">Source</a></p>
+
+<p>Image preprocessing, processing, Structural analysis could be found in [Bioimaging]/too2/new_pheno/bioimaging/</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-dicom-files-management-font"><font color=#CD5555 face="黑体">DICOM files management</font></h2>
+
+<p><p align="justify">The digital imaging and communications in medicine (DICOM) protocol is the leading standard for image data management in healthcare. Imaging biomarkers and image-based surrogate endpoints in clinical trials and medical registries require DICOM viewer software with advanced functionality for visualization and interfaces for integration.</p>
+
+<hr />
+
+<h3 id="dicombrowser-dicom-files-management-magnetic-resonance-imaging">DicomBrowser | DICOM files management : Magnetic resonance imaging</h3>
+
+<p><p align="justify">Allows users to view and modify digital imaging and communications in medicine (DICOM) metadata. DicomBrowser is designed to simplify the transition between clinically oriented DICOM tools and the specialized workflows of research imaging. Metadata changes can be specified manually in the DicomBrowser GUI, in a spreadsheet generated by DicomSummarize, or via scripts written in the DicomEdit language.</p>
+
+<p><a href="http://nrg.wustl.edu/software/dicom-browser/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2012 J Digit Imaging) <a href="https://www.ncbi.nlm.nih.gov/pubmed/22349992" target="_blank">DicomBrowser: software for viewing and modifying DICOM metadata.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Mallinckrodt Institute of Radiology, Washington University School of Medicine, Saint Louis, MO, USA</p>
+
+<hr />
+
+<h3 id="mipav-medical-image-processing-analysis-and-visualization">MIPAV | Medical Image Processing Analysis and Visualization</h3>
+
+<p><p align="justify">Enables quantitative analysis and visualization of medical images of numerous modalities such as PET (positron emission tomography), MRI (magnetic resonance imaging), CT (computerized tomography), or microscopy. Using MIPAV&rsquo;s standard user-interface and analysis tools, researchers at remote sites (via the internet) can easily share research data and analyses, thereby enhancing their ability to research, diagnose, monitor, and treat medical disorders.</p>
+
+<p><a href="https://mipav.cit.nih.gov/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li><a href="https://doi.org/10.1109/CBMS.2001.941749" target="_blank">Medical Image Processing, Analysis and Visualization in clinical research.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>CBEL, Center for Information Technology, National Institutes of Health, Bethesda, MD, USA</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="computerized-tomography-scan-imaging-ct">Computerized Tomography Scan Imaging (CT)</h1>
+
+<p><p align="justify">Utilization of computed tomography (CT) has increased dramatically over the past several decades. The total number of CT examinations performed annually in the United States has risen from approximately 3 million in 1980 to nearly 70 million in 2007. Integrating CT into routine care has improved patient health care dramatically, and CT is widely considered among the most important advances in medicine. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20008690" target="_blank">Source</a></p>
+
+<p>Image preprocessing, processing, Structural analysis could be found in [Bioimaging]/too2/new_pheno/bioimaging/</p>
+
+<h2 id="font-color-cd5555-face-黑体-phantom-imaging-font"><font color=#CD5555 face="黑体">Phantom Imaging</font></h2>
+
+<h3 id="ctsim-computed-tomography-simulator">CTSim | Computed Tomography Simulator</h3>
+
+<p><p align="justify">Simulates the process of transmitting X-rays through phantom objects. CTSim is a method that reconstructs the original phantom image from the projections using a variety of algorithms. Additionally, this package has a wide array of image analysis and image processing functions. CTSim uses geometrical objects to describe the object being scanned. A phantom is composed of one or more phantom elements: simple geometric shapes, specifically, rectangles, triangles, ellipses, sectors and segments.</p>
+
+<p><a href="http://www.ctsim.org/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Documentation</strong>:</p>
+
+<p><a href="http://files.kpe.io/ctsim/ctsim-manual-latest.pdf" target="_blank">http://files.kpe.io/ctsim/ctsim-manual-latest.pdf</a></p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-image-format-management-font"><font color=#CD5555 face="黑体">Image Format Management</font></h2>
+
+<h3 id="nibabel">NiBabel</h3>
+
+<p><p align="justify">Furnishes a neuroimaging viewer. NiBabel provides an access to a wide range of imaging formats. Besides, it contains functionality for writing annotation and morphometry files. The software allows users to access to header information and image data.</p>
+
+<p><a href="http://nipy.org/nibabel/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Issues</strong>:</p>
+
+<p><a href="https://github.com/nipy/nibabel/issues" target="_blank">https://github.com/nipy/nibabel/issues</a></p>
+
+<p><strong>Maintainer(s)</strong>:</p>
+
+<p>Michael Hanke <a href="mailto:michael.hanke@gmail.com" target="_blank">michael.hanke@gmail.com</a></p>
+
+<p>person_outline Matthew Brett <a href="mailto:matthew.brett@gmail.com" target="_blank">matthew.brett@gmail.com</a></p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="nuclear-medicine-imaging">Nuclear Medicine Imaging</h1>
+
+<p><p align="justify">Nuclear medicine is a multidisciplinary field that develops and uses instrumentation and tracers (radiopharmaceuticals) to study physiological processes and noninvasively diagnose, stage, and treat diseases. Particularly, it offers a unique means to study cancer biology in vivo and to optimize cancer therapy for individual patients. <a href="https://www.ncbi.nlm.nih.gov/pubmed/22446937" target="_blank">Source</a></p>
+
+<h2 id="font-color-cd5555-face-黑体-3d-image-reconstruction-font"><font color=#CD5555 face="黑体">3D Image Reconstruction</font></h2>
+
+<p><p align="justify">Computer technologies can produce 3D representations of interesting human tissue and organs that have been serial-sectioned, dyed or stained, imaged, and segmented for 3D visualization. 3D reconstruction also has great potential in the fields of tissue engineering and 3D printing.</p>
+
+<hr />
+
+<h3 id="stir-software-for-tomographic-image-reconstruction">STIR | Software for Tomographic Image Reconstruction</h3>
+
+<p><p align="justify">Provides a Platform-independent Object-Oriented framework for all data manipulations in tomographic imaging. STIR can be used to study existing and/or new reconstruction algorithms for a wide variety of cylindrical scanners. It enables the research community to study the performance of several algorithms on Single Photon Emission Computed Tomography (SPECT) data, and potentially implement new algorithms by expanding the existing framework. The tool offers the prospect to compare different Positron Emission Tomography (PET) scanners using identical correction and reconstruction software.</p>
+
+<p><a href="https://sourceforge.net/projects/stir/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2013 Med Phys) <a href="https://www.ncbi.nlm.nih.gov/pubmed/24007178" target="_blank">Integration of advanced 3D SPECT modeling into the open-source STIR framework.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Physiological Sciences I - Biophysics and Bioengineering Unit, University of Barcelona, Barcelona, Spain;</p>
+
+<p>Grupo de Imagen Biomédica de la Universidad de Barcelona (GIB-UB), Biomedical Research Networking Center in Bioengineering, Biomaterials and Nanomedicine (CIBER-BBN), Barcelona, Spain</p>
+
+<hr />
+
+<h3 id="niftypet">NiftyPET</h3>
+
+<p><p align="justify">Reconstructs images and can conduct analysis facilitating high-throughput parallel processing. NiftyPET determines the distributions of regional and voxel value uncertainties through the use of list-mode bootstrapping. It supports dynamic list-mode (LM) processing and reconstruction. This tool permits to ascertain the impact of limited counting statistics in positron-emission tomography (PET) on all the different stages of image reconstruction and analysis.</p>
+
+<p><a href="https://cmiclab.cs.ucl.ac.uk/pmarkiew/NiftyPET" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 Neuroinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/29280050" target="_blank">NiftyPET: a High-throughput Software Platform for High Quantitative Accuracy and Precision PET Imaging and Analysis.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Translational Imaging Group, CMIC, Department of Medical Physics, Biomedical Engineering, University College London, London, UK;</p>
+
+<p>Department for Applied Mathematics and Theoretical Physics, University of Cambridge, Cambridge, UK</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-kinetic-analysis-font"><font color=#CD5555 face="黑体">Kinetic Analysis</font></h2>
+
+<h3 id="qmodeling-kinetic-analysis-nuclear-medicine-imaging">QModeling | Kinetic analysis : Nuclear medicine imaging</h3>
+
+<p><p align="justify">Assists users for the kinetic analysis of PET pharmacokinetic analysis and the generation of parametric images. QModeling is a multiplatform software developed as a toolbox of statistical parametric mapping (SPM) that assists users in neuroimaging studies. It works locally, without the need of uploading sensitive data to online servers. It also facilitates the inclusion of kinetic modeling into flexible neuroimaging pipelines.</p>
+
+<p><a href="http://www.uimcimes.es/contenidos/general.action?idsupersection=3&amp;idselectedsection=10&amp;selectedsection=QModeling&amp;idparentmenu=7&amp;idpage=7&amp;idcomission=0&amp;typetable=opcionescursos" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2018 Neuroinformatics) <a href="https://doi.org/10.1007/s12021-018-9384-y" target="_blank">QModeling: a Multiplatform, Easy-to-Use and Open-Source Toolbox for PET Kinetic Analysis.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Molecular Imaging Unit, Centro de Investigaciones Médico-Sanitarias, Fundación General de la Universidad de Málaga, Málaga, Spain</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="find-more-tools-omictools-https-omictools-com-phenomics-category">Find more tools: <a href="https://omictools.com/phenomics-category" target="_blank"><strong>OMICTOOLS</strong></a></h1>
+
+<p><a href="http://www.medicalimagingtalk.com/radiology-imaging/test-follow-medical-imaging-appropriateness-criteria/" target="_blank"><em>Image Citation</em></a></p>
+
+<hr />
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/phenomics" target="_blank">phenomics</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/too2/new_pheno/brain/">Brain Connectomics</a></li>
+        
+        <li><a href="/too2/new_pheno/bioimaging/">Bioimaging</a></li>
+        
+        <li><a href="/too2/new_pheno/neuroinformatics/">Computational Neuroinformatics</a></li>
+        
+        <li><a href="/too2/new_pheno/neurophysiology/">Neorophysiology</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

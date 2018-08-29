@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Table of Contents  Primary structure  ProtParam COILS  Secondary structure  PredictProtein PSIPRED  tertiary structure  Phyre Swiss-PdbViewer  Find more tools: OMICTOOLS   Primary structure Protein primary structure is the linear sequence of amino acids in a peptide or protein. By convention, the primary structure of a protein is reported starting from the amino-terminal (N) end to the carboxyl-terminal &copy; end. Protein biosynthesis is most commonly performed by ribosomes in cells.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/too2/new_proteo/structure/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/too2/new_proteo/structure/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="CityU-Bioinformatics">
+  <meta property="og:url" content="/too2/new_proteo/structure/">
+  <meta property="og:title" content="Prediction of Protein Structure | CityU-Bioinformatics">
+  <meta property="og:description" content="Table of Contents  Primary structure  ProtParam COILS  Secondary structure  PredictProtein PSIPRED  tertiary structure  Phyre Swiss-PdbViewer  Find more tools: OMICTOOLS   Primary structure Protein primary structure is the linear sequence of amino acids in a peptide or protein. By convention, the primary structure of a protein is reported starting from the amino-terminal (N) end to the carboxyl-terminal &copy; end. Protein biosynthesis is most commonly performed by ribosomes in cells.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Prediction of Protein Structure | CityU-Bioinformatics</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CityU-Bioinformatics</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#bioinformatics">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Programming</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/program/r">
+                
+                <span>R Language</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorial/getstart/">
+                
+                <span>Getting Started With R</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorial/bms4001/">
+                
+                <span>BMS4001 tutorials</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Database</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/base2/dna">
+                
+                <span>DNA Databases</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/base2/rna">
+                
+                <span>RNA Databses</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tools</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/too2/genomics">
+                
+                <span>Genomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/epigenomics">
+                
+                <span>Epigenomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/transcriptomics">
+                
+                <span>Transcriptomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/proteomics">
+                
+                <span>Proteomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/metabolomics">
+                
+                <span>Metabolomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/phenomics">
+                
+                <span>Phenomics</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Journals</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/journal/comprehensive">
+                
+                <span>Multidisciplinary</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/specific">
+                
+                <span>Bioinformatics Specific</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/conferences">
+                
+                <span>Conferences</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/server/">
+            
+            <span>Servers</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Prediction of Protein Structure</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Prediction%20of%20Protein%20Structure&amp;url=%2ftoo2%2fnew_proteo%2fstructure%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2ftoo2%2fnew_proteo%2fstructure%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftoo2%2fnew_proteo%2fstructure%2f&amp;title=Prediction%20of%20Protein%20Structure"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2ftoo2%2fnew_proteo%2fstructure%2f&amp;title=Prediction%20of%20Protein%20Structure"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Prediction%20of%20Protein%20Structure&amp;body=%2ftoo2%2fnew_proteo%2fstructure%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<hr />
+
+<p><img src="/img/tools/protein/structure.jpg" alt="blast" align="center"></p>
+
+<p><span id="top"></span></p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#primary-structure">Primary structure</a>
+<ul>
+<li><a href="#protparam">ProtParam</a></li>
+<li><a href="#coils">COILS</a></li>
+</ul></li>
+<li><a href="#secondary-structure">Secondary structure</a>
+<ul>
+<li><a href="#predictprotein">PredictProtein</a></li>
+<li><a href="#psipred">PSIPRED</a></li>
+</ul></li>
+<li><a href="#tertiary-structure">tertiary structure</a>
+<ul>
+<li><a href="#phyre">Phyre</a></li>
+<li><a href="#swiss-pdbviewer">Swiss-PdbViewer</a></li>
+</ul></li>
+<li><a href="#find-more-tools-omictools-https-omictools-com-proteomics-category">Find more tools: <a href="https://omictools.com/proteomics-category" target="_blank"><strong>OMICTOOLS</strong></a></a></li>
+</ul>
+</nav>
+
+
+<h1 id="primary-structure">Primary structure</h1>
+
+<p><p align="justify">Protein primary structure is the linear sequence of amino acids in a peptide or protein. By convention, the primary structure of a protein is reported starting from the amino-terminal (N) end to the carboxyl-terminal &copy; end. Protein biosynthesis is most commonly performed by ribosomes in cells. Peptides can also be synthesized in the laboratory.[citation needed] Protein primary structures can be directly sequenced, or inferred from DNA sequences.</p>
+
+<hr />
+
+<h2 id="protparam">ProtParam</h2>
+
+<p><p align="justify">ProtParam (References / Documentation) is a tool which allows the computation of various physical and chemical parameters for a given protein stored in Swiss-Prot or TrEMBL or for a user entered protein sequence. The computed parameters include the molecular weight, theoretical pI, amino acid composition, atomic composition, extinction coefficient, estimated half-life, instability index, aliphatic index and grand average of hydropathicity (GRAVY) (Disclaimer).</p>
+
+<p><a href="https://web.expasy.org/protparam/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pubmed/10027275" target="_blank">Protein Identification and Analysis Tools on the ExPASy Server</a> (In) John M. Walker (ed): The Proteomics Protocols Handbook, Humana Press (2005).<br /></li>
+</ul>
+
+<p><p align="justify">ProtParam computes various physico-chemical properties that can be deduced from a protein sequence. No additional information is required about the protein under consideration. The protein can either be specified as a Swiss-Prot/TrEMBL accession number or ID, or in form of a raw sequence. White space and numbers are ignored. If you provide the accession number of a Swiss-Prot/TrEMBL entry, you will be prompted with an intermediary page that allows you to select the portion of the sequence on which you would like to perform the analysis. The choice includes a selection of mature chains or peptides and domains from the Swiss-Prot feature table (which can be chosen by clicking on the positions), as well as the possibility to enter start and end position in two boxes. By default (i.e. if you leave the two boxes empty) the complete sequence will be analyzed.</p>
+
+<h2 id="coils">COILS</h2>
+
+<p><p align="justify">COILS is a program that compares a sequence to a database of known parallel two-stranded coiled-coils and derives a similarity score. By comparing this score to the distribution of scores in globular and coiled-coil proteins, the program then calculates the probability that the sequence will adopt a coiled-coil conformation.</p>
+
+<p><a href="https://embnet.vital-it.ch/software/COILS_form.html" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li>Lupas, A., Van Dyke, M., and Stock, J. (1991) <a href="https://www.researchgate.net/profile/Andrei_Lupas/publication/6042403_Predicting_Coled_Coils_from_Protein_Sequences/links/00b4951710268a2a2d000000.pdf" target="_blank">Predicting Coiled Coils from Protein Sequences</a></li>
+</ul>
+
+<p><a href="https://embnet.vital-it.ch/software/coils/COILS_doc.html" target="_blank"><strong>Tutorial</strong></a></p>
+
+<p><p align="justify">COILS is specific for solvent-exposed, left-handed coiled coils. Other types of coiled-coil structure, such as buried coiled coils (e.g the central coiled coil in catabolite repressor protein, or some transmembrane domains) and right-handed coiled coils, are not detected by the program.</p>
+
+<p><p align="justify">COILS does not reach yes-or-no decisions based on a threshold value. Rather, it yields a set of probabilities that presumably reflect the coiled-coil forming potential of a sequence. This means that even at high probabilities (e.g. &gt;90%), there will be (and should be) sequences that in fact do not form a coiled coil, though they may have the potential to do so in a different context.</p>
+
+<p><p align="justify">COILS is biased towards hydrophilic, highly charged sequences. For this reason, all scans should be performed with a weighted and an unweighted matrix, and the results compared. Differences of more than 20-30 percentage points in the probabilities should be taken to indicate that a coiled-coil structure is unlikely, the elevated scores being mainly due to the high incidence of charged residues (note, though, that this would have marked human mannose-binding protein as a false positive).</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="secondary-structure">Secondary structure</h1>
+
+<p><p align="justify">The secondary structure is the pattern of hydrogen bonds in a biopolymer. These determine the general three-dimensional form of local segments of the biopolymers, but does not describe the global structure of specific atomic positions in three-dimensional space, which are considered to be tertiary structure. Secondary structure is formally defined by the hydrogen bonds of the biopolymer, as observed in an atomic-resolution structure. In proteins, the secondary structure is defined by patterns of hydrogen bonds between backbone amine and carboxyl groups (sidechain–mainchain and sidechain–sidechain hydrogen bonds are irrelevant), where the DSSP definition of a hydrogen bond is used. In nucleic acids, the secondary structure is defined by the hydrogen bonding between the nitrogenous bases.</p>
+
+<hr />
+
+<h2 id="predictprotein">PredictProtein</h2>
+
+<p><p align="justify">PredictProtein (PP) went online as one of the first Internet servers in molecular biology in 1992. Ever since, it has been driven by the commitment to include whatever can reasonably be predicted from protein sequence with respect to the annotation of protein function and structure. Our goal has been a service that bridges the annotation gap created by the explosion of sequencing data. Today hunderds of users from over 110 countries access the site daily and submit thousands of sequences.</p>
+
+<p><a href="https://www.predictprotein.org/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC441515/" target="_blank">The PredictProtein server</a></li>
+</ul>
+
+<p><p align="justify">PredictProtein started out by predicting secondary structure and returning families of related proteins. Solvent accessibility and transmembrane helix prediction followed suit shortly thereafter. Over the two decades that PredictProtein has been operating, we have substantially expanded the breadth of structural annotations, e.g. by adding predictions of non-regular secondary structure and intrinsically disordered regions, disulphide bridges and inter-residue contacts, and finally by also covering trans-membrane beta barrels structures. We have also added important resources for the prediction of protein function, e.g. assisting in the annotation of subcellular localization (LocTree, LocTree2, NLSpred), identifying protein-protein interaction sites (ISIS) and protein-DNA binding sites (DISIS &amp; SomeNA to be released shortly). We have added a few simple tools to predict enzymatic activity (unfortunately, this method did not survive the move from New York to Munich) and to infer GeneOntology numbers through sequence homology (MetaStudent). Another major addition are the tools that predict the effect of amino acid changes upon protein function (SNAP &amp; SNAP2), and directly upon protein structure (in preparation).</p>
+
+<h2 id="psipred">PSIPRED</h2>
+
+<p><p align="justify">PSI-blast based secondary structure PREDiction (PSIPRED) is a method used to investigate protein structure. It uses artificial neural network machine learning methods in its algorithm.It is a server-side program, featuring a website serving as a front-end interface, which can predict a protein&rsquo;s secondary structure (beta sheets, alpha helixes and coils) from the primary sequence.</p>
+
+<p><a href="http://bioinf.cs.ucl.ac.uk/psipred/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li>Buchan DWA, Minneci F, Nugent TCO, Bryson K, Jones DT. (2013). <a href="https://www.ncbi.nlm.nih.gov/pubmed/23748958" target="_blank">Scalable web services for the PSIPRED Protein Analysis Workbench . Nucleic Acids Research .</a></li>
+</ul>
+
+<p><p align="justify">PSIPRED is available as a web service and as software. The software is distributed as source code, licensed technically as proprietary software. It allows modifying, but enforces freeware provisions by forbidding for-profit distribution of the software and its results.</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="tertiary-structure">tertiary structure</h1>
+
+<p><p align="justify">The tertiary structure of a protein or any other macromolecule is its three-dimensional structure, as defined by the atomic coordinates. Proteins and nucleic acids fold into complex three-dimensional structures which result in the molecules&rsquo; functions. While such structures are diverse and complex, they are often composed of recurring, recognizable tertiary structure motifs and domains that serve as molecular building blocks. Tertiary structure is considered to be largely determined by the biomolecule&rsquo;s primary structure (its sequence of amino acids or nucleotides).</p>
+
+<h2 id="phyre">Phyre</h2>
+
+<p><p align="justify">Phyre and Phyre2 (Protein Homology/AnalogY Recognition Engine; pronounced as &lsquo;fire&rsquo;) are web-based services for protein structure prediction that are free for non-commercial use.</p>
+
+<p><p align="justify">Phyre is among the most popular methods for protein structure prediction having been cited over 1500 times. Like other remote homology recognition techniques (see protein threading), it is able to regularly generate reliable protein models when other widely used methods such as PSI-BLAST cannot. Phyre2 has been designed (funded by the BBSRC)[citation needed] to ensure a user-friendly interface for users inexpert in protein structure prediction methods.</p>
+
+<p><a href="http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li><a href="https://www.nature.com/articles/nprot.2015.053" target="_blank">The Phyre2 web portal for protein modeling, prediction and analysis</a></li>
+</ul>
+
+<p><p align="justify">The Phyre and Phyre2 servers predict the three-dimensional structure of a protein sequence using the principles and techniques of homology modeling. Because the structure of a protein is more conserved in evolution than its amino acid sequence, a protein sequence of interest (the target) can be modeled with reasonable accuracy on a very distantly related sequence of known structure (the template), provided that the relationship between target and template can be discerned through sequence alignment. Currently the most powerful and accurate methods for detecting and aligning remotely related sequences rely on profiles or hidden Markov models (HMMs). These profiles/HMMs capture the mutational propensity of each position in an amino acid sequence based on observed mutations in related sequences and can be thought of as an &lsquo;evolutionary fingerprint&rsquo; of a particular protein.</p>
+
+<h2 id="swiss-pdbviewer">Swiss-PdbViewer</h2>
+
+<p><p align="justify">Swiss-PdbViewer (aka DeepView) is an application that provides a user friendly interface allowing to analyze several proteins at the same time. The proteins can be superimposed in order to deduce structural alignments and compare their active sites or any other relevant parts. Amino acid mutations, H-bonds, angles and distances between atoms are easy to obtain thanks to the intuitive graphic and menu interface.</p>
+
+<p><a href="https://spdbv.vital-it.ch/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong></p>
+
+<ul>
+<li>Guex, N. and Peitsch, M.C. (1997) <a href="https://www.ncbi.nlm.nih.gov/pubmed/9504803" target="_blank">SWISS-MODEL and the Swiss-PdbViewer: An environment for comparative protein modeling</a>.</li>
+</ul>
+
+<p><p align="justify">Swiss-PdbViewer (aka DeepView) has been developped since 1994 by Nicolas Guex. Swiss-PdbViewer is tightly linked to SWISS-MODEL, an automated homology modeling server developed within the Swiss Institute of Bioinformatics (SIB) at the Structural Bioinformatics Group at the Biozentrum in Basel.</p>
+
+<p><p align="justify">Working with these two programs greatly reduces the amount of work necessary to generate models, as it is possible to thread a protein primary sequence onto a 3D template and get an immediate feedback of how well the threaded protein will be accepted by the reference structure before submitting a request to build missing loops and refine sidechain packing.</p>
+
+<p><p align="justify">Swiss-PdbViewer can also read electron density maps, and provides various tools to build into the density. In addition, various modeling tools are integrated and residues can be mutated.</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="find-more-tools-omictools-https-omictools-com-proteomics-category">Find more tools: <a href="https://omictools.com/proteomics-category" target="_blank"><strong>OMICTOOLS</strong></a></h1>
+
+<p><a href="https://www.slideshare.net/karamveer37/methods-for-protein-structure-prediction" target="_blank"><em>Image Citation</em></a></p>
+
+<hr />
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/proteomics" target="_blank">proteomics</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/too2/new_proteo/immune/">Immune System</a></li>
+        
+        <li><a href="/too2/new_proteo/interactions/">Protein Interactions</a></li>
+        
+        <li><a href="/too2/new_proteo/pro_seq/">Protein Sequence/Expression</a></li>
+        
+        <li><a href="/too2/new_proteo/membrane/">Membrane Protein</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

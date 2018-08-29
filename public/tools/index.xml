@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on CityU-Bioinformatics</title>
+    <link>/tools/</link>
+    <description>Recent content in Tools on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gene Prediction</title>
+      <link>/tools/gene_new/gene-prediction/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/gene_new/gene-prediction/</guid>
+      <description>Table of Contents  GeneMark GenScan FGENESH EMBOSS Cpgplot Splign   In computational biology, gene prediction or gene finding refers to the process of identifying the regions of genomic DNA that encode genes. This includes protein-coding genes as well as RNA genes, but may also include prediction of other functional elements such as regulatory regions. Gene finding is one of the first and most important steps in understanding the genome of a species once it has been sequenced.</description>
+    </item>
+    
+    <item>
+      <title>Molecular Evolution</title>
+      <link>/tools/mole_new/evolution/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/mole_new/evolution/</guid>
+      <description>This part may contains the following tools: (Will be filled in the future)
+Mega OrthMCL Phylip Image citation</description>
+    </item>
+    
+    <item>
+      <title>Prediction of Protein Structure</title>
+      <link>/tools/pro_new/structure/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/pro_new/structure/</guid>
+      <description>This part may contains the following tools: (Will be filled in the future)
+Primary structure  ProtParam
+ COILS
+  Secondary structure  PredictProtein
+ PSIPRED
+  tertiary structure  Phyre
+ Swiss-PdbViewer
+  citation</description>
+    </item>
+    
+    <item>
+      <title>Sequence Alignment</title>
+      <link>/tools/seq_new/sequence-alignment/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/seq_new/sequence-alignment/</guid>
+      <description>Table of Contents  Sequence Alignment  Blast FASTA/SSEARCH/PSI-Search/GGSEARCH/GLSEARCH  Multiple Sequence Alignment  Clustal Omega Clustal W / Clustal X    In bioinformatics, a sequence alignment is a way of arranging the sequences of DNA, RNA, or protein to identify regions of similarity that may be a consequence of functional, structural, or evolutionary relationships between the sequences. Aligned sequences of nucleotide or amino acid residues are typically represented as rows within a matrix.</description>
+    </item>
+    
+    <item>
+      <title> Analysis of High-throughput Sequencing Data</title>
+      <link>/tools/seq_new/htsdata/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/seq_new/htsdata/</guid>
+      <description>This part may contains the following tools: (Will be filled in the future)
+Fastqc Bowtie Cufflinks Tophat IGV Image citation</description>
+    </item>
+    
+    <item>
+      <title>Microarray</title>
+      <link>/tools/gene_new/microarray/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/gene_new/microarray/</guid>
+      <description>An overview of DNA microarray technology. RNA is isolated from the control and the target samples and labelled cDNA is then hybridized.
+This part may contains the following tools: (Will be filled in the future)
+Express Coverter MIDAS MeV Cluster GenMAPP Image citation</description>
+    </item>
+    
+    <item>
+      <title>Protein Mass Spectrometry</title>
+      <link>/tools/pro_new/mass/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/pro_new/mass/</guid>
+      <description>This part may contains the following tools: (Will be filled in the future)
+X!Tandem Mascot Sequest TPP citation</description>
+    </item>
+    
+    <item>
+      <title>Genome annotation</title>
+      <link>/tools/gene_new/genome-annotation/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/gene_new/genome-annotation/</guid>
+      <description>This part may contains the following tools: (Will be filled in the future)
+Gene Ontology KEGG pathways Image citation</description>
+    </item>
+    
+    <item>
+      <title>Genome Network Analysis</title>
+      <link>/tools/gene_new/network/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tools/gene_new/network/</guid>
+      <description>This part may contains the following tool: (Will be filled in the future)
+Cytoscape Image citation</description>
+    </item>
+    
+  </channel>
+</rss>

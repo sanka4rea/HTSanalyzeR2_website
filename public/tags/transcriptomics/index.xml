@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transcriptomics on CityU-Bioinformatics</title>
+    <link>/tags/transcriptomics/</link>
+    <description>Recent content in Transcriptomics on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/transcriptomics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Low-level RNA detection</title>
+      <link>/too2/new_trans/lowlevel/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/lowlevel/</guid>
+      <description>Table of Contents  Low-level RNA detection    Patch-seq RRR | Patch-seq Reduced-Rank Regression   scRNA-seq analysis  Noise reduction  scLVM | single-cell Latent Variable Model OEFinder URSM | Unified RNA-Sequencing Model  Transcript quantification  TraCeR BRIE | Bayesian Regression for Isoform Estimation UMIS | Unique Molecular IdentifierS  Cell lineage and pseudotime inference/ Marker gene detection  Seurat SPADE | Spanning tree Progression of Density normalized Events Monocle   Single-cell qPCR    DPT MAST | Model-based Analysis of Single-cell Transcriptomics SCATTOME | Single Cell Analysis of Targeted TranscriptOME   dPCR    ddPCRclust Definetherain ddpcr | droplet digital polymerase chain reaction   Find more tools: OMICTOOLS   Low-level RNA detection Patch-seq RRR | Patch-seq Reduced-Rank Regression Provides an interpretable visualization of the relationship between high-dimensional single cell transcriptomes and electrophysiological information obtained using techniques like patch-seq.</description>
+    </item>
+    
+    <item>
+      <title>Non-Coding RNA</title>
+      <link>/too2/new_trans/non_coding/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/non_coding/</guid>
+      <description>Table of Contents  Non-Coding RNA Analysis  miRNA Target Prediction  TargetScan PicTar psRNATarget  miRNA Enrichment  DIANA-miRPath FAME | Functional Assignment of MicroRNAs via Enrichment miTEA  miRNA-disease Association Prediction  miRPD MCMG  RNAi Reagent Design  RNAxs WMD | Web MicroRNA Designer E-RNAi  High-throughput RNAi Screening  cellHTS CARD   Small RNA sequencing Data analysis (sRNA-seq Analysis)  tRNA-derived RNA Annotation  tRF2Cancer HAMR  ncRNA Identification  miRDeep omiRas  IsomiR detection  DeAnnIso isomiR-SEA   miRNA Array analysis    InCroMAP AgiMicroRna   Find more tools: OMICTOOLS   Non-Coding RNA Analysis Noncoding RNAs (ncRNAs) accomplish a remarkable variety of biological functions.</description>
+    </item>
+    
+    <item>
+      <title>RNA Modifications</title>
+      <link>/too2/new_trans/rnamodification/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/rnamodification/</guid>
+      <description>Table of Contents  RNA Modifications Analysis  Protein-binding Region Prediction  RNAcompete catRAPID omics RBPmap  Alternative Splicing Annotation  APPRIS rPGA Exogean  RNA Methylation Prediction  SRAMP iRNAm5C-PseDNC m6Apred   Methylated RNA Immunoprecipitation Sequencing Data Analysis (MeRIP-seq Analysis)  Spliced Read Alignment  TopHat HISAT | Hierarchical Indexing for Spliced Alignment of Transcripts Subread  Peak Calling  ExomePeak | Peak calling : MeRIP-seq analysis MeTPeak  De novo motif discovery  Weeder HOMER | Hypergeometric Optimization of Motif EnRichment MEME Suite   Degradome-seq Analysis    sPARTA package CleaveLand   Find more tools: OMICTOOLS   RNA Modifications Analysis From a biosynthetic point of view, the roughly 100 known different RNA nucleotide modifications can be easily divided according to their complexity.</description>
+    </item>
+    
+    <item>
+      <title>RNA Transcription</title>
+      <link>/too2/new_trans/transcription/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/transcription/</guid>
+      <description>Table of Contents  Transcription analysis  Prognostic Biomarker Identification  KM plotter cBioPortal  Region Discrimination  CPC CNCI  Gene co-expression prediction  GeneMANIA WGCNA  Gene regulatory network inference  NIR GRAM  Gene set enrichment analysis  GSEA DAVID   RNA-seq analysis  Gene fusion detection  Segemehl Subread  Alternative splicing events identification  Cufflinks   Gene expression array analysis  Prognostic biomarker identification  KM plotter cBioPortal  Differential expression  DESeq agriGO   Metatranscriptomic sequencing analysis  Prediction-base Taxonomic  MetaBAT  Homology-Based Taxonomic  MEGAN | MEtaGenome ANalyzer   Find more tools: OMICTOOLS   Transcription analysis Transcript abundance is in many ways an extraordinary phenotype, with special attributes that confer particular importance on an understanding of its genetics.</description>
+    </item>
+    
+    <item>
+      <title>RNA-Protein Interactions</title>
+      <link>/too2/new_trans/rna_pro/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/rna_pro/</guid>
+      <description>Table of Contents  CLIP-seq Analysis  Peak Calling  DFilter CLIPper  Motif Discovery  RNAmotifs MEMERIS  miRNA Target Site Detection  MicroMUMMIE MIRZA   Ribo-seq Analysis  Ribosome P-site Localization  RiboProfiling riboWaltz  Ribosome Stalling Prediction  ROSE  Translated ORF Prediction  ORF-RATER   Find more tools: OMICTOOLS   CLIP-seq Analysis Cross-Linking Immunoprecipitation associated to high-throughput sequencing (CLIP-seq) is a technique used to identify RNA directly bound to RNA-binding proteins across the entire transcriptome in cell or tissue samples.</description>
+    </item>
+    
+  </channel>
+</rss>

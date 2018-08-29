@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Table of Contents  Protein Interactions Analysis  Protein-DNA Interaction Prediction  LigParGen | Protein-ligand docking : Protein interaction analysis DBSI | DNA Binding Site Identifier  Protein-RNA Interaction Prediction  HADDOCK | High Ambiguity Driven protein-protein DOCKing Global Score | Protein-RNA interactions  Drug-target Interaction Prediction  Open Targets | Drug-target interaction prediction : Protein interaction analysis PiHelper | Drug-target interaction prediction : Protein interaction analysis  Protein-protein Interaction Prediction  mentha | Protein-protein interaction prediction : Protein interaction analysis compPASS | comparative proteomic analysis software suite  Protein-ligand Docking  UCSF Chimera  Protein-protein Docking  PIPER | Protein-protein docking : Protein interaction analysis HADDOCK | High Ambiguity Driven protein-protein DOCKing   Find more tools: OMICTOOLS   Protein Interactions Analysis Proteins interact with nucleic acids, other proteins, ligands, metal ions, to exert their biological functions.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/too2/new_proteo/interactions/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/too2/new_proteo/interactions/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="CityU-Bioinformatics">
+  <meta property="og:url" content="/too2/new_proteo/interactions/">
+  <meta property="og:title" content="Protein Interactions | CityU-Bioinformatics">
+  <meta property="og:description" content="Table of Contents  Protein Interactions Analysis  Protein-DNA Interaction Prediction  LigParGen | Protein-ligand docking : Protein interaction analysis DBSI | DNA Binding Site Identifier  Protein-RNA Interaction Prediction  HADDOCK | High Ambiguity Driven protein-protein DOCKing Global Score | Protein-RNA interactions  Drug-target Interaction Prediction  Open Targets | Drug-target interaction prediction : Protein interaction analysis PiHelper | Drug-target interaction prediction : Protein interaction analysis  Protein-protein Interaction Prediction  mentha | Protein-protein interaction prediction : Protein interaction analysis compPASS | comparative proteomic analysis software suite  Protein-ligand Docking  UCSF Chimera  Protein-protein Docking  PIPER | Protein-protein docking : Protein interaction analysis HADDOCK | High Ambiguity Driven protein-protein DOCKing   Find more tools: OMICTOOLS   Protein Interactions Analysis Proteins interact with nucleic acids, other proteins, ligands, metal ions, to exert their biological functions.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Protein Interactions | CityU-Bioinformatics</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CityU-Bioinformatics</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#bioinformatics">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Programming</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/program/r">
+                
+                <span>R Language</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorial/getstart/">
+                
+                <span>Getting Started With R</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorial/bms4001/">
+                
+                <span>BMS4001 tutorials</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Database</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/base2/dna">
+                
+                <span>DNA Databases</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/base2/rna">
+                
+                <span>RNA Databses</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tools</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/too2/genomics">
+                
+                <span>Genomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/epigenomics">
+                
+                <span>Epigenomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/transcriptomics">
+                
+                <span>Transcriptomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/proteomics">
+                
+                <span>Proteomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/metabolomics">
+                
+                <span>Metabolomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/phenomics">
+                
+                <span>Phenomics</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Journals</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/journal/comprehensive">
+                
+                <span>Multidisciplinary</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/specific">
+                
+                <span>Bioinformatics Specific</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/conferences">
+                
+                <span>Conferences</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/server/">
+            
+            <span>Servers</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Protein Interactions</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Protein%20Interactions&amp;url=%2ftoo2%2fnew_proteo%2finteractions%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2ftoo2%2fnew_proteo%2finteractions%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftoo2%2fnew_proteo%2finteractions%2f&amp;title=Protein%20Interactions"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2ftoo2%2fnew_proteo%2finteractions%2f&amp;title=Protein%20Interactions"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Protein%20Interactions&amp;body=%2ftoo2%2fnew_proteo%2finteractions%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<hr />
+
+<p><img src="/img/tools/protein/actions.png"  width="400" height="400" alt="anno" align="center"></p>
+
+<p><span id="top"></span></p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#protein-interactions-analysis">Protein Interactions Analysis</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-protein-dna-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-DNA Interaction Prediction</font></a>
+<ul>
+<li><a href="#ligpargen-protein-ligand-docking-protein-interaction-analysis">LigParGen | Protein-ligand docking : Protein interaction analysis</a></li>
+<li><a href="#dbsi-dna-binding-site-identifier">DBSI | DNA Binding Site Identifier</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-protein-rna-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-RNA Interaction Prediction</font></a>
+<ul>
+<li><a href="#haddock-high-ambiguity-driven-protein-protein-docking">HADDOCK | High Ambiguity Driven protein-protein DOCKing</a></li>
+<li><a href="#global-score-protein-rna-interactions">Global Score | Protein-RNA interactions</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-drug-target-interaction-prediction-font"><font color=#CD5555 face="黑体">Drug-target Interaction Prediction</font></a>
+<ul>
+<li><a href="#open-targets-drug-target-interaction-prediction-protein-interaction-analysis">Open Targets | Drug-target interaction prediction : Protein interaction analysis</a></li>
+<li><a href="#pihelper-drug-target-interaction-prediction-protein-interaction-analysis">PiHelper | Drug-target interaction prediction : Protein interaction analysis</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-protein-protein-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-protein Interaction Prediction</font></a>
+<ul>
+<li><a href="#mentha-protein-protein-interaction-prediction-protein-interaction-analysis">mentha | Protein-protein interaction prediction : Protein interaction analysis</a></li>
+<li><a href="#comppass-comparative-proteomic-analysis-software-suite">compPASS | comparative proteomic analysis software suite</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-protein-ligand-docking-font"><font color=#CD5555 face="黑体">Protein-ligand Docking</font></a>
+<ul>
+<li><a href="#ucsf-chimera">UCSF Chimera</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-protein-protein-docking-font"><font color=#CD5555 face="黑体">Protein-protein Docking</font></a>
+<ul>
+<li><a href="#piper-protein-protein-docking-protein-interaction-analysis">PIPER | Protein-protein docking : Protein interaction analysis</a></li>
+<li><a href="#haddock-high-ambiguity-driven-protein-protein-docking-1">HADDOCK | High Ambiguity Driven protein-protein DOCKing</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#find-more-tools-omictools-https-omictools-com-proteomics-category">Find more tools: <a href="https://omictools.com/proteomics-category" target="_blank"><strong>OMICTOOLS</strong></a></a></li>
+</ul>
+</nav>
+
+
+<h1 id="protein-interactions-analysis">Protein Interactions Analysis</h1>
+
+<p><p align="justify"><strong>Proteins interact</strong> with nucleic acids, other proteins, ligands, metal ions, to exert their biological functions. Mass-spectrometry and protein chips have revolutionized the field of proteomics and the study of protein interactions to a wider scale, which require specific tools for their analyses. The study of protein interactions has implications for drug discovery and design.</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-protein-dna-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-DNA Interaction Prediction</font></h2>
+
+<p>Protein-DNA complexes play vital roles in many cellular processes by the interactions of amino acids with DNA. Several computational methods have been developed for predicting the interacting residues in DNA-binding proteins using sequence and/or structural information.</p>
+
+<hr />
+
+<h3 id="ligpargen-protein-ligand-docking-protein-interaction-analysis">LigParGen | Protein-ligand docking : Protein interaction analysis</h3>
+
+<p><p align="justify">Provides an intuitive interface for generating OPLS-AA/1.14*CM1A(-LBCC) force field (FF) parameters for organic ligands. LigParGen is a web server which generates ligand parameters for common simulation software packages such as NAMD, GROMACS, OpenMM, BOSS and MCPRO. The software allows the users to obtain high quality parameters for molecular mechanics (MM) simulations without extensive knowledge about MM force fields or quantum mechanics (QM) methods.</p>
+
+<p><a href="http://zarbi.chem.yale.edu/ligpargen/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 Nucleic Acids Res) <a href="https://doi.org/10.1093/nar/gkx312" target="_blank">LigParGen web server: an automatic OPLS-AA parameter generator for organic ligands.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Chemistry, Yale University, New Haven, CT, USA</p>
+
+<hr />
+
+<h3 id="dbsi-dna-binding-site-identifier">DBSI | DNA Binding Site Identifier</h3>
+
+<p><p align="justify">A powerful structure-based SVM model for the prediction and visualization of DNA binding sites on protein structures. DBSI is a machine learning approach to classify surface residues as binders or non-binders of DNA. DBSI employs sequence- and structure-based features encompassing a range of physical, chemical, geometric and evolutionary properties of the protein surface. DBSI also implements microenvironment features that allow for small-scale structural perturbation and the role of non-local cooperative effects. DBSI has been shown to be a top-performing model to predict DNA binding sites on the surface of a protein or peptide and shows promise in predicting RNA binding sites.</p>
+
+<p><a href="https://mitchell-lab.biochem.wisc.edu/DBSI_Server/index.php" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2016 Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/27259543" target="_blank">DBSI server: DNA binding site identifier.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Biochemistry, University of Wisconsin-Madison, Madison, WI, USA; School of Life Sciences, Anhui University, Hefei, Anhui Province, China</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-protein-rna-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-RNA Interaction Prediction</font></h2>
+
+<p><p align="justify">Interactions between proteins and RNA play essential roles for life. For example, protein-RNA interactions mediate RNA metabolic processes such as splicing, polyadenylation, messenger RNA stability, localization and translation. Furthermore, many of these RNA-binding proteins are involved in human diseases.</p>
+
+<hr />
+
+<h3 id="haddock-high-ambiguity-driven-protein-protein-docking">HADDOCK | High Ambiguity Driven protein-protein DOCKing</h3>
+
+<p><p align="justify">An information-driven flexible docking approach for the modeling of biomolecular complexes. HADDOCK distinguishes itself from ab-initio docking methods in the fact that it encodes information from identified or predicted protein interfaces in ambiguous interaction restraints (AIRs) to drive the docking process. HADDOCK can deal with a large class of modeling problems including protein-protein, protein-nucleic acids and protein-ligand complexes.</p>
+
+<p><a href="http://haddock.science.uu.nl/services/HADDOCK2.2/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li><p>(2018 Nat Protoc) <a href="https://www.nature.com/articles/s41596-018-0017-6" target="_blank">Defining distance restraints in HADDOCK.</a></p></li>
+
+<li><p>(2016 J Mol Biol) <a href="https://www.ncbi.nlm.nih.gov/pubmed/26410586" target="_blank">The HADDOCK2.2 Web Server: User-Friendly Integrative Modeling of Biomolecular Complexes.</a></p></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Bijvoet Center for Biomolecular Research, Science Faculty, Utrecht University, Utrecht, Netherlands</p>
+
+<hr />
+
+<h3 id="global-score-protein-rna-interactions">Global Score | Protein-RNA interactions</h3>
+
+<p><p align="justify">Predicts protein interactions with transcripts &gt; 1000nt. Global Score is an algorithm that integrates the information coming from protein and RNA fragments into an overall binding propensity value. It was applied to all RBP-RNA pairs studied by eCLIP, and the number of predicted interactions significantly increases with the read counts, while pairs that are predicted to not interact show the opposite trend. It was also used to predict physical interactions between Xist and RNA-binding proteins and identified 5 interactions with Spen, Hnrnpk, Hrnnpu/Saf-A, Lbr and Ptbp1.</p>
+
+<p><a href="http://service.tartaglialab.com/update_submission/103005/aa8e78df20" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2016 Nat Methods) <a href="https://www.ncbi.nlm.nih.gov/pubmed/28032625" target="_blank">Quantitative predictions of protein interactions with long noncoding RNAs.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Centre for Genomic Regulation (CRG), The Barcelona Institute of Science and Technology, Barcelona, Spain; Universitat Pompeu Fabra (UPF), Barcelona, Spain</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-drug-target-interaction-prediction-font"><font color=#CD5555 face="黑体">Drug-target Interaction Prediction</font></h2>
+
+<p><p align="justify">Identification of drug-target interactions is an important process in drug discovery. Although high-throughput screening and other biological assays are becoming available, experimental methods for drug-target interaction identification remain to be extremely costly, time-consuming and challenging even nowadays. Therefore, various computational models have been developed to predict potential drug-target associations on a large scale.</p>
+
+<hr />
+
+<h3 id="open-targets-drug-target-interaction-prediction-protein-interaction-analysis">Open Targets | Drug-target interaction prediction : Protein interaction analysis</h3>
+
+<p><p align="justify">A data integration and visualization platform that provides evidence about the association of known and potential drug targets with diseases. Open Targets platform is designed to support identification and prioritization of biological targets for follow-up. Each drug target is linked to a disease using integrated genome-wide data from a broad range of data sources. The platform provides either a target-centric workflow to identify diseases that may be associated with a specific target, or a disease-centric workflow to identify targets that may be associated with a specific disease. Users can easily transition between these target- and disease-centric workflows. Open Targets platform provides free data access through your web browser or through an API (Application Programming Interface).</p>
+
+<p><a href="https://www.targetvalidation.org/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 Nucleic Acids Res) <a href="https://www.ncbi.nlm.nih.gov/pubmed/27899665" target="_blank">Open Targets: a platform for therapeutic target identification and validation.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Open Targets, Wellcome Genome Campus, Hinxton, Cambridge, UK; GSK, Medicines Research Center, Gunnels Wood Road, Stevenage, UK; Biogen, Cambridge, MA, USA</p>
+
+<hr />
+
+<h3 id="pihelper-drug-target-interaction-prediction-protein-interaction-analysis">PiHelper | Drug-target interaction prediction : Protein interaction analysis</h3>
+
+<p><p align="justify">A drug- and antibody-target information aggregator and provider service.</p>
+
+<p><a href="https://bitbucket.org/armish/pihelper" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2013 Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/23766416" target="_blank">PiHelper: an open source framework for drug-target and antibody-target data.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Computational Biology Center, Memorial Sloan-Kettering Cancer Center, NY, USA</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-protein-protein-interaction-prediction-font"><font color=#CD5555 face="黑体">Protein-protein Interaction Prediction</font></h2>
+
+<p><p align="justify">Systems biology research is like solving a puzzle: the goal is to figure out how the various parts interact and work together. The interactome of an organism is then analogous to the puzzle’s key: it describes the network of all the protein–protein interactions (PPIs). As such, identifying all the PPIs for an organism is of great value. Despite the use of high-throughput techniques in discovering PPIs, however, the coverage of experimentally determined PPI data remains poor. Such low coverage is partly because the set of possible PPIs to be verified is so large that any exhaustive experimental verification will take a long time, even with high-throughput techniques.</p>
+
+<hr />
+
+<h3 id="mentha-protein-protein-interaction-prediction-protein-interaction-analysis">mentha | Protein-protein interaction prediction : Protein interaction analysis</h3>
+
+<p><p align="justify">Provides protein-protein interaction (PPI) data for many species, including human. mentha allows users to assemble and analyze collections of proteins and networks of interest. It focuses on experimentally demonstrated physical interactions, in order to avoid the confusion between physical and genetic interactions and between experimental and inferred interactions. The database’s information come from manually curated protein-protein interaction databases.</p>
+
+<p><a href="http://mentha.uniroma2.it/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2013 Nat Methods) <a href="https://www.ncbi.nlm.nih.gov/pubmed/23900247" target="_blank">mentha: a resource for browsing integrated protein-interaction networks</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Biology, University of Rome Tor Vergata, Rome, Italy; Fondazione Santa Lucia Istituto di Ricovero e Cura a Carattere Scientifico (IRCCS), Rome, Italy</p>
+
+<hr />
+
+<h3 id="comppass-comparative-proteomic-analysis-software-suite">compPASS | comparative proteomic analysis software suite</h3>
+
+<p><p align="justify">Allows to analyze proteomic data. The compPASS method gives confidence measurements to interactions from parallel non-reciprocal proteomic datasets in using unbiased metrics. This tool is applicable to proteomic investigations ranging from focused studies on a small number of selected proteins to the analysis of entire protein families or biological regulatory networks.</p>
+
+<p><a href="https://github.com/dnusinow/cRomppass" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2009 Cell) <a href="https://www.ncbi.nlm.nih.gov/pubmed/19615732" target="_blank">Defining the human deubiquitinating enzyme interaction landscape.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Pathology, Harvard Medical School, Boston, MA, USA; Department of Cell Biology, Harvard Medical School, Boston, MA, USA</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-protein-ligand-docking-font"><font color=#CD5555 face="黑体">Protein-ligand Docking</font></h2>
+
+<p>Protein-ligand docking is a key computational method in the design of starting points for the drug discovery process.</p>
+
+<hr />
+
+<h3 id="ucsf-chimera">UCSF Chimera</h3>
+
+<p><p align="justify">Permits to interactively visualize and analyse molecular structures and related data, including density maps, supramolecular assemblies, sequence alignments, docking results, trajectories, and conformational ensembles. UCSF Chimera allows users to incorporate new features. It contains some extensions which permits to visualize large-scale molecular assemblies such as viral coats, and allows researchers to share a Chimera session interactively despite being at separate locales. Other extensions can be used for extend the tool capabilities.</p>
+
+<p><a href="http://www.cgl.ucsf.edu/chimera/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2004 J Comput Chem) <a href="https://www.ncbi.nlm.nih.gov/pubmed/15264254" target="_blank">UCSF Chimera&ndash;a visualization system for exploratory research and analysis.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Computer Graphics Laboratory, Department of Pharmaceutical Chemistry, University of California, San Francisco, CA, USA</p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-protein-protein-docking-font"><font color=#CD5555 face="黑体">Protein-protein Docking</font></h2>
+
+<p><p align="justify">Protein-protein interactions lie at the heart of most cellular processes. Protein-protein docking is important for understanding disease mechanisms and for drug discovery.</p>
+
+<hr />
+
+<h3 id="piper-protein-protein-docking-protein-interaction-analysis">PIPER | Protein-protein docking : Protein interaction analysis</h3>
+
+<p><p align="justify">Generates accurate structures of protein-protein complexes. PIPER is a Fast Fourier Transform (FFT)-based protein docking program, extended to be used with pairwise interaction potentials and based on docking code from the Vajda lab at Boston University. The software allows to improve results docking an antigen to an antibody or docking to form a dimer or trimer.</p>
+
+<p><a href="https://www.schrodinger.com/piper" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2006 Proteins) <a href="https://www.ncbi.nlm.nih.gov/pubmed/16933295" target="_blank">PIPER: an FFT-based protein docking program with pairwise potentials.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Biomedical Engineering, Boston University, Boston, MA, USA; Program in Bioinformatics, Boston University, Boston, MA, USA</p>
+
+<hr />
+
+<h3 id="haddock-high-ambiguity-driven-protein-protein-docking-1">HADDOCK | High Ambiguity Driven protein-protein DOCKing</h3>
+
+<p><p align="justify">An information-driven flexible docking approach for the modeling of biomolecular complexes. HADDOCK distinguishes itself from ab-initio docking methods in the fact that it encodes information from identified or predicted protein interfaces in ambiguous interaction restraints (AIRs) to drive the docking process. HADDOCK can deal with a large class of modeling problems including protein-protein, protein-nucleic acids and protein-ligand complexes.</p>
+
+<p><a href="http://haddock.science.uu.nl/services/HADDOCK2.2/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li><p>(2018 Nat Protoc) <a href="https://www.nature.com/articles/s41596-018-0017-6" target="_blank">Defining distance restraints in HADDOCK.</a></p></li>
+
+<li><p>(2010 Nat Protoc) <a href="https://www.ncbi.nlm.nih.gov/pubmed/20431534" target="_blank">The HADDOCK web server for data-driven biomolecular docking.</a></p></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Bijvoet Center for Biomolecular Research, Science Faculty, Utrecht University, Utrecht, Netherlands</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="find-more-tools-omictools-https-omictools-com-proteomics-category">Find more tools: <a href="https://omictools.com/proteomics-category" target="_blank"><strong>OMICTOOLS</strong></a></h1>
+
+<p><a href="http://pubs.rsc.org/en/content/articlelanding/2015/cc/c4cc08565e#!divAbstract" target="_blank"><em>Image Citation</em></a></p>
+
+<hr />
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/proteomics" target="_blank">proteomics</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/too2/new_proteo/structure/">Prediction of Protein Structure</a></li>
+        
+        <li><a href="/too2/new_proteo/pro_seq/">Protein Sequence/Expression</a></li>
+        
+        <li><a href="/too2/new_proteo/membrane/">Membrane Protein</a></li>
+        
+        <li><a href="/too2/new_proteo/immune/">Immune System</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

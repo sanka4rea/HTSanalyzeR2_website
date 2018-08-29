@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enrichment on HTSanalyzeR2</title>
+    <link>/tags/enrichment/</link>
+    <description>Recent content in Enrichment on HTSanalyzeR2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/enrichment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Enriched subnetwork analysis</title>
+      <link>/resources/es/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/es/</guid>
+      <description>Table of Contents    Enriched subnetwork analysis  Prepare input, initialize and preprocess Perform analysis and view the identified subnetwork Summarize results     
+Enriched subnetwork analysis You can also perform subnetwork analysis (Beisser (2010), Dittrich MT (2008)) to extract the subnetwork enriched with nodes which are associated with a significant phenotype using HTSanalyzeR2. The network can either be fetched by our package to download specific species network from BioGRID database or defined by users.</description>
+    </item>
+    
+  </channel>
+</rss>

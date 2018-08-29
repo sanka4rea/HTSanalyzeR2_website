@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Table of Contents  Biological Steps  Realistic Neuronal Network Modelling  The Virtual Brain Brian  Compartment Neuron modelling  NEURON neuroConstruct   File Manipulation  Model Files Conversion  SBML2LaTeX Sbmlharvester  Model Files Visualization  SBMLToolbox SBMLEditor  Model Building  NeuroManager PyNN   Find more tools: OMICTOOLS   Modelling in computational neuroscience is becoming a crucial tool for understanding how experimentally observed properties of neural systems emerge from lower-level biophysical processes.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/too2/new_pheno/neuroinformatics/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/too2/new_pheno/neuroinformatics/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="CityU-Bioinformatics">
+  <meta property="og:url" content="/too2/new_pheno/neuroinformatics/">
+  <meta property="og:title" content="Computational Neuroinformatics | CityU-Bioinformatics">
+  <meta property="og:description" content="Table of Contents  Biological Steps  Realistic Neuronal Network Modelling  The Virtual Brain Brian  Compartment Neuron modelling  NEURON neuroConstruct   File Manipulation  Model Files Conversion  SBML2LaTeX Sbmlharvester  Model Files Visualization  SBMLToolbox SBMLEditor  Model Building  NeuroManager PyNN   Find more tools: OMICTOOLS   Modelling in computational neuroscience is becoming a crucial tool for understanding how experimentally observed properties of neural systems emerge from lower-level biophysical processes.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Computational Neuroinformatics | CityU-Bioinformatics</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CityU-Bioinformatics</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#bioinformatics">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Programming</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/program/r">
+                
+                <span>R Language</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorial/getstart/">
+                
+                <span>Getting Started With R</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorial/bms4001/">
+                
+                <span>BMS4001 tutorials</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Database</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/base2/dna">
+                
+                <span>DNA Databases</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/base2/rna">
+                
+                <span>RNA Databses</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tools</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/too2/genomics">
+                
+                <span>Genomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/epigenomics">
+                
+                <span>Epigenomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/transcriptomics">
+                
+                <span>Transcriptomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/proteomics">
+                
+                <span>Proteomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/metabolomics">
+                
+                <span>Metabolomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/phenomics">
+                
+                <span>Phenomics</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Journals</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/journal/comprehensive">
+                
+                <span>Multidisciplinary</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/specific">
+                
+                <span>Bioinformatics Specific</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/conferences">
+                
+                <span>Conferences</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/server/">
+            
+            <span>Servers</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Computational Neuroinformatics</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Computational%20Neuroinformatics&amp;url=%2ftoo2%2fnew_pheno%2fneuroinformatics%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2ftoo2%2fnew_pheno%2fneuroinformatics%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftoo2%2fnew_pheno%2fneuroinformatics%2f&amp;title=Computational%20Neuroinformatics"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2ftoo2%2fnew_pheno%2fneuroinformatics%2f&amp;title=Computational%20Neuroinformatics"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Computational%20Neuroinformatics&amp;body=%2ftoo2%2fnew_pheno%2fneuroinformatics%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<hr />
+
+<p><img src="/img/tools/pheno/neuro.jpg"  width="500" height="400" alt="anno" align="center"></p>
+
+<p><span id="top"></span></p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#biological-steps">Biological Steps</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-realistic-neuronal-network-modelling-font"><font color=#CD5555 face="黑体">Realistic Neuronal Network Modelling</font></a>
+<ul>
+<li><a href="#the-virtual-brain">The Virtual Brain</a></li>
+<li><a href="#brian">Brian</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-compartment-neuron-modelling-font"><font color=#CD5555 face="黑体">Compartment Neuron modelling</font></a>
+<ul>
+<li><a href="#neuron">NEURON</a></li>
+<li><a href="#neuroconstruct">neuroConstruct</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#file-manipulation">File Manipulation</a>
+<ul>
+<li><a href="#font-color-cd5555-face-黑体-model-files-conversion-font"><font color=#CD5555 face="黑体">Model Files Conversion</font></a>
+<ul>
+<li><a href="#sbml2latex">SBML2LaTeX</a></li>
+<li><a href="#sbmlharvester">Sbmlharvester</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-model-files-visualization-font"><font color=#CD5555 face="黑体">Model Files Visualization</font></a>
+<ul>
+<li><a href="#sbmltoolbox">SBMLToolbox</a></li>
+<li><a href="#sbmleditor">SBMLEditor</a></li>
+</ul></li>
+<li><a href="#font-color-cd5555-face-黑体-model-building-font"><font color=#CD5555 face="黑体">Model Building</font></a>
+<ul>
+<li><a href="#neuromanager">NeuroManager</a></li>
+<li><a href="#pynn">PyNN</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#find-more-tools-omictools-https-omictools-com-phenomics-category">Find more tools: <a href="https://omictools.com/phenomics-category" target="_blank"><strong>OMICTOOLS</strong></a></a></li>
+</ul>
+</nav>
+
+
+<p><p align="justify"><strong>Modelling in computational neuroscience</strong> is becoming a crucial tool for understanding how experimentally observed properties of neural systems emerge from lower-level biophysical processes. In the same way that processing of information happens at multiple physical scales in the nervous system, software applications have been created which specialize in modelling different aspects of neurons and networks. <a href="https://doi.org/10.1007/978-1-4614-7320-6_93-1" target="_blank">Source</a></p>
+
+<hr />
+
+<h1 id="biological-steps">Biological Steps</h1>
+
+<h2 id="font-color-cd5555-face-黑体-realistic-neuronal-network-modelling-font"><font color=#CD5555 face="黑体">Realistic Neuronal Network Modelling</font></h2>
+
+<p><p align="justify">Realistic modeling is a new advanced methodology for investigating brain functions. Realistic modeling is based on a detailed biophysical description of neurons and synapses, which can be integrated into microcircuits.</p>
+
+<hr />
+
+<h3 id="the-virtual-brain">The Virtual Brain</h3>
+
+<p><p align="justify">Simulates the dynamics of large-scale brain networks with biologically realistic connectivity. The Virtual Brain uses tractographic data (DTI/DSI) to generate connectivity matrices and build cortical and subcortical brain networks. The connectivity matrix defines the connection strengths and time delays via signal transmission between all network nodes. Various neural mass models are available in the repertoire of The Virtual Brain and define the dynamics of a network node. Together, the neural mass models at the network nodes and the connectivity matrix define the Virtual Brain. The Virtual Brain simulates and generates the time courses of various forms of neural activity including Local Field Potentials (LFP) and firing rate, as well as brain imaging data such as EEG, MEG and BOLD activations as observed in fMRI.</p>
+
+<p><a href="https://thevirtualbrain.org/tvb/zwei" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li><p>(2015 Trends Cogn Sci) <a href="https://www.ncbi.nlm.nih.gov/pubmed/26412099" target="_blank">The Rediscovery of Slowness: Exploring the Timing of Cognition.</a></p></li>
+
+<li><p>(2015 Nat Rev Neurosci) <a href="https://www.ncbi.nlm.nih.gov/pubmed/26081790" target="_blank">
+Rethinking segregation and integration: contributions of whole-brain modelling.</a></p></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Institut de Neurosciences des Systèmes, Aix Marseille Université, Marseille, France;</p>
+
+<p>Department of Neurology, BrainModes Group, Charité University of Medicine, Berlin, Germany;</p>
+
+<hr />
+
+<h3 id="brian">Brian</h3>
+
+<p><p align="justify">Provides a simulator for spiking neural networks. Brian can be used to create a network of neurons and synapses connected with a network of astrocytes. This method permits user to focus mainly on the details of their models than on their implementation. Neuron models are defined by writing differential equations in standard mathematical notation, or facilitating scientific communication. This tool is useful for teaching computational neuroscience and for neuroscientific modelling at the systems level.</p>
+
+<p><a href="http://briansimulator.org/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 BioRxiv) <a href="https://www.biorxiv.org/content/early/2017/10/05/198366" target="_blank">Modeling neuron-glia interactions with the Brian 2 simulator.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Sorbonne Universites, UPMC Univ Paris 06, INSERM, CNRS, Institut de la Vision, Paris, France</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-compartment-neuron-modelling-font"><font color=#CD5555 face="黑体">Compartment Neuron modelling</font></h2>
+
+<p><p align="justify">The electrical properties of single neurons can be acurately modeled using multicompartmental modeling. Such models are biologically motivated and have a close correspondence with the underlying biophysical properties of neurons and their ion channels. These multicompartment models are also important as building blocks for detailed network models.</p>
+
+<hr />
+
+<h3 id="neuron">NEURON</h3>
+
+<p><p align="justify">Provides a simulation environment for modeling individual neurons and networks of neurons. NEURON provides tools for conveniently building, managing, and using models in a way that is numerically sound and computationally efficient. It is particularly well-suited to problems that are closely linked to experimental data, especially those that involve cells with complex anatomical and biophysical properties. NEURON is designed to let the users deal directly with familiar neuroscience concepts. Consequently, they can think in terms of the biophysical properties of membrane and cytoplasm, the branched architecture of neurons, and the effects of synaptic communication between cells.</p>
+
+<p><a href="https://neuron.yale.edu/neuron/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li><p>(2016 Comput Intell Neurosci) <a href="https://www.ncbi.nlm.nih.gov/pubmed/27413363" target="_blank">Optimizing NEURON Simulation Environment Using Remote Memory Access with Recursive Doubling on Distributed Memory Systems.</a></p></li>
+
+<li><p>(2009 Front Neuroinform) <a href="https://www.ncbi.nlm.nih.gov/pubmed/19198661" target="_blank">NEURON and Python.</a></p></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Computer Science, Yale University New Haven, CT, USA</p>
+
+<hr />
+
+<h3 id="neuroconstruct">neuroConstruct</h3>
+
+<p><p align="justify">Facilitates the creation, visualization, and analysis of networks of multicompartmental neurons in 3D space. neuroConstruct provides a graphical user interface (GUI) which allows model generation and modification without programming. Models within neuroConstruct are based on new simulator-independent NeuroML standards, allowing automatic generation of code for NEURON or GENESIS simulators. neuroConstruct was tested by reproducing published models and its simulator independence verified by comparing the same model on two simulators. neuroConstruct can be used for teaching network function in health and disease. The 3D models generated will allow simulations of increased biological realism, enabling more direct comparisons with results from new experimental methods for measuring neural activity in 3D at high spatial and temporal resolution.</p>
+
+<p><a href="http://www.neuroconstruct.org/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2007 Neuron) <a href="https://www.ncbi.nlm.nih.gov/pubmed/17442244" target="_blank">neuroConstruct: a tool for modeling networks of neurons in 3D space.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Physiology, University College London, Gower Street, London, UK</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="file-manipulation">File Manipulation</h1>
+
+<h2 id="font-color-cd5555-face-黑体-model-files-conversion-font"><font color=#CD5555 face="黑体">Model Files Conversion</font></h2>
+
+<h3 id="sbml2latex">SBML2LaTeX</h3>
+
+<p><p align="justify">Facilitates the complicated and cumbersome model development process by providing a simple method to translate such models to human-readable reports. SBML2LaTeX is a Java-based stand-alone program to fill this gap. A convenient web service also allows users to directly convert SBML to various formats, including DVI, LATEX and PDF, and provides many settings for customization. It covers all constructs defined in the latest specification of SBML (Level 2 Version 4) and is able to typeset complex kinetic formulas.</p>
+
+<p><a href="http://www.cogsys.cs.uni-tuebingen.de/software/SBML2LaTeX/index.html" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2009 Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/19307240" target="_blank">SBML2L(A)T(E)X: conversion of SBML files into human-readable reports.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Center for Bioinformatics Tübingen (ZBIT), University of Tübingen, Tübingen, Germany;</p>
+
+<p>Beckman Institute BNMC, California Institute of Technology, Pasadena, CA, USA</p>
+
+<hr />
+
+<h3 id="sbmlharvester">Sbmlharvester</h3>
+
+<p><p align="justify">Converts Systems Biology Markup Language (SBML) models into OWL. Sbmlharvester allows to check SBML model structure and complex by querying across biomedicals ontologies and models. The software couples levels of granularity, validates models and provides a way to establish a basic qualitative layer for expressing the semantics of biosimulation models.</p>
+
+<p><a href="https://code.google.com/archive/p/sbmlharvester/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2011 BMC Syst Biol) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3170340/" target="_blank">Integrating systems biology models and biomedical ontologies.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Genetics, University of Cambridge, Downing Street, Cambridge, UK;</p>
+
+<p>Department of Biology, Carleton University, Ottawa, ON, Canada</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-model-files-visualization-font"><font color=#CD5555 face="黑体">Model Files Visualization</font></h2>
+
+<h3 id="sbmltoolbox">SBMLToolbox</h3>
+
+<p><p align="justify">A toolbox that facilitates importing and exporting models represented in the Systems Biology Markup Language (SBML) in and out of the MATLAB environment and provides functionality that enables an experienced user of either SBML or MATLAB to combine the computing power of MATLAB with the portability and exchangeability of an SBML model. SBMLToolbox supports all levels and versions of SBML.</p>
+
+<p><a href="http://sbml.org/Downloads" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2006 Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/16574696" target="_blank">SBMLToolbox: an SBML toolbox for MATLAB users.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Science and Technology Research Institute, University of Hertfordshire Hatfield, UK</p>
+
+<hr />
+
+<h3 id="sbmleditor">SBMLEditor</h3>
+
+<p><p align="justify">Simplifies creation and edition of correct SBML files. SBMLEditor is an editor of SBML files allowing user to create and remove all the necessary bits and pieces of SBML in a controlled way. This tool can be useful for scientists who need to read an SBML model generated by another tool.</p>
+
+<p><a href="https://www.ebi.ac.uk/compneur-srv/SBMLeditor.html" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2007 BMC Bioinformatics) <a href="https://www.ncbi.nlm.nih.gov/pubmed/17341299" target="_blank">SBMLeditor: effective creation of models in the Systems Biology Markup language (SBML).</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, UK</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h2 id="font-color-cd5555-face-黑体-model-building-font"><font color=#CD5555 face="黑体">Model Building</font></h2>
+
+<h3 id="neuromanager">NeuroManager</h3>
+
+<p><p align="justify">Automates the workflow of simulation job submissions when using heterogeneous computational resources, simulators, and simulation tasks. NeuroManager is an object-oriented simulation management software engine for computational neuroscience. This method (i) provides flexibility to adapt a variety of neuroscience simulators, (ii) simplifies the use of heterogeneous computational resources, from desktops to super computer clusters, and (iii) improves tracking of simulation evolution.</p>
+
+<p><a href="https://github.com/SantamariaLab/NeuroManager" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2017 Neuroinformatics) <a href="https://doi.org/10.1007/s12021-017-9337-x" target="_blank">Integrating the Allen Brain Institute Cell Types Database into Automated Neuroscience Workflow.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Biomedical Engineering, The University of Texas at San Antonio, San Antonio, TX, USA;</p>
+
+<p>Department of Biology, The University of Texas at San Antonio, San Antonio, TX, USA</p>
+
+<hr />
+
+<h3 id="pynn">PyNN</h3>
+
+<p><p align="justify">Proposes a simulator-independent language for building neuronal network models. PyNN makes it possible to write a simulation script once, using the Python programming language, and run it without modification on any supported simulator (currently NEURON, NEST, PCSIM, Brian and the Heidelberg VLSI neuromorphic hardware). PyNN increases the productivity of neuronal network modelling by providing high-level abstraction, by promoting code sharing and reuse, and by providing a foundation for simulator-agnostic analysis, visualization and data-management tools. PyNN increases the reliability of modelling studies by making it much easier to check results on multiple simulators.</p>
+
+<p><a href="http://neuralensemble.org/PyNN/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(2009 Front Neuroinform) <a href="https://www.ncbi.nlm.nih.gov/pubmed/19194529" target="_blank">PyNN: A Common Interface for Neuronal Network Simulators.</a></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Unité de Neurosciences Intégratives et Computationelles, CNRS Gif sur Yvette, France</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="find-more-tools-omictools-https-omictools-com-phenomics-category">Find more tools: <a href="https://omictools.com/phenomics-category" target="_blank"><strong>OMICTOOLS</strong></a></h1>
+
+<p><a href="http://www.medicalimagingtalk.com/radiology-imaging/test-follow-medical-imaging-appropriateness-criteria/" target="_blank"><em>Image Citation</em></a></p>
+
+<hr />
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/phenomics" target="_blank">phenomics</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/too2/new_pheno/brain/">Brain Connectomics</a></li>
+        
+        <li><a href="/too2/new_pheno/neurophysiology/">Neorophysiology</a></li>
+        
+        <li><a href="/too2/new_pheno/medicalimage/">Medical Imaging</a></li>
+        
+        <li><a href="/too2/new_pheno/bioimaging/">Bioimaging</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

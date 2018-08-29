@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bio on CityU-Bioinformatics</title>
+    <link>/tags/bio/</link>
+    <description>Recent content in Bio on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/bio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bioinformatics FAQ</title>
+      <link>/post/bioinformatics/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/post/bioinformatics/</guid>
+      <description>Table of Contents  What is bioinformatics? What are the origins of bioinformatics? The goals of bioinformatics What are the most common bioinformatics programs? What are the most common bioinformatics technologies? How are data analyzed in bioinformatics? Fields related to bioinformatics Citation：   What is bioinformatics? Bioinformatics has been defined many different ways, since practitioners do not always agree upon the scope of its use within the biological and computer sciences, but it is always considered a combination of both sciences, along with other contributing disciplines.</description>
+    </item>
+    
+  </channel>
+</rss>

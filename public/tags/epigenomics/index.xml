@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Epigenomics on CityU-Bioinformatics</title>
+    <link>/tags/epigenomics/</link>
+    <description>Recent content in Epigenomics on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/epigenomics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNA Modifications</title>
+      <link>/too2/new_epi/modifications/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/modifications/</guid>
+      <description>Table of Contents  DNA modification analysis  DNA Methylation Prediction  T-BioInfo MethSurv Nanopolish  DNA Methylation Deconvolution  FaST-LMM-EWASher ReFACTor | Reference-Free Adjustment for Cell-Type composition EDec | Epigenomic Deconvolution   DNA methylation array analysis  Differential Methylation Site Detection  limma | Linear Models for Microarray Data FastDMA RnBeads  Differential Methylation region Detection  ChAMP FastDMA RnBeads   Enrichment Analysis  Over-representation analysis  Blast2GO g:Profiler STEM | Short Time-series Expression Miner  Gene set enrichment analysis  GSEA | Gene Set Enrichment Analysis DESeq | Differential expression : HTS analysis edgeR | empirical analysis of DGE in R  Topology enrichment analysis  DAVID | Database for Annotation, Visualization and Integrated Discovery HOMER | Hypergeometric Optimization of Motif EnRichment GeneCodis | Topology enrichment analysis   Bisulfite Sequencing Data Analysis (BS-seq analysis)  Differential Methylation region Detection  methylKit | Methylation annotation : BS-seq analysis SMART | Specific Methylation Analysis and Report Tool DSS-single | Differentially methylated region detection : BS-seq analysis  Methylation Annotation  GBSA | Genome Bisulfite Sequencing Analyser methylKit | Methylation annotation : BS-seq analysis  EWAS  ReFACTor | Reference-Free Adjustment for Cell-Type composition FaST-LMM-EWASher   Find more tools: OMICTOOLS   DNA modification analysis Whole genome DNA methylation detection is one of the most important part of epigenetics research.</description>
+    </item>
+    
+    <item>
+      <title>DNA-Protein Interactions</title>
+      <link>/too2/new_epi/dna_pro/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/dna_pro/</guid>
+      <description>Table of Contents  HT-SELEX Analysis    AptaTools SelexGLM   DNase-seq Analysis    HOMER DFilter   ChIP-seq Analysis  De novo assembly  denovochipseq  Peak calling  HOMER MACS SICER  Differential peak calling  DiffBind GenoGAM MAnorm  De novo motif discovery  HOMER Weeder kmerHMM   Find more tools: OMICTOOLS   DNA-binding proteins are proteins that have DNA-binding domains and thus have a specific or general affinity for single- or double-stranded DNA.</description>
+    </item>
+    
+    <item>
+      <title>Nucleosome Positioning</title>
+      <link>/too2/new_epi/position/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/position/</guid>
+      <description>Table of Contents  Nucleosome Positioning  NuCMap | Nucleosome positioning : Epigenomics nuMap | Nucleosome positioning : Epigenomics ICM | Interactive Chromatin Modeling  MNase-seq analysis  PING nucleR NOrMAL  ATAC-seq analysis  NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis  Find more tools: OMIVTOOLS   Nucleosome Positioning NuCMap | Nucleosome positioning : Epigenomics Maps directly nucleosome centers. NuCMap is based on chemical modification of engineered histones.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prostr on CityU-Bioinformatics</title>
+    <link>/tags/prostr/</link>
+    <description>Recent content in Prostr on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/prostr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CATH/Gene3D</title>
+      <link>/database/pro_str_new/cath/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/cath/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PMP</title>
+      <link>/database/pro_str_new/pmp/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/pmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PROSITE</title>
+      <link>/database/pro_str_new/prosite/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/prosite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RCSB PDB</title>
+      <link>/database/pro_str_new/pdb/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/pdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SCOP2</title>
+      <link>/database/pro_str_new/scop2/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/scop2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SWISS-model</title>
+      <link>/database/pro_str_new/swiss-model/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/database/pro_str_new/swiss-model/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

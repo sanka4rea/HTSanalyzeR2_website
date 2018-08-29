@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base2s on HTSanalyzeR2</title>
+    <link>/base2/</link>
+    <description>Recent content in Base2s on HTSanalyzeR2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/base2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rfam</title>
+      <link>/base2/rfam/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/base2/rfam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>European Bioinformatics Institute (EMBL)</title>
+      <link>/base2/embl/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/base2/embl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MiRBase</title>
+      <link>/base2/mir/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/base2/mir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>23andMe</title>
+      <link>/base2/23andme/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/base2/23andme/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

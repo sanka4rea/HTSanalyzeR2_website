@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on HTSanalyzeR2</title>
+    <link>/post/</link>
+    <description>Recent content in Tutorials on HTSanalyzeR2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Case Study 1: Single dataset analysis for gene expression data</title>
+      <link>/post/casestudy1/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/post/casestudy1/</guid>
+      <description>Table of Contents  Introduction 1. Hypergeometric test and gene set enrichment analysis  1.1 Prepare the input data 1.2 Initialize and preprocess 1.3 Perform analysis 1.4 Summarize results 1.5 Plot gene sets 1.6 Enrichment Map 1.7 Enrichment Map with specific gene sets  2.Enriched subnetwork analysis  2.1 Prepare input, initialize and preprocess 2.2 Perform analysis and view the identified subnetwork 2.3 Summarize results    Introduction This case study uses HTSanalyzeR2 to perform gene set over-representation analysis, enrichment analysis and enriched subnetwork analyses on a common gene expression profile.</description>
+    </item>
+    
+    <item>
+      <title>Case Study 2: Time series analysis for CRISPR data</title>
+      <link>/post/casestudy2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/post/casestudy2/</guid>
+      <description>Table of Contents  Introduction 1. Hypergeometric test and gene set enrichment analysis  1.1 Prepare the input data 1.2 Initialize and preprocess 1.3 Perform analysis  2. Enriched subnetwork analysis  2.1 Prepare input, initialize and preprocess 3.2 Perform analysis    Introduction This case study uses a time series CRISPR genome-wide drop-out data as a demonstration to perform time series analysis. Data ‘d7’, ‘d13’ and ‘d25’ are three gRNA sequencing data after transducting the CRISPR system into a human cancer cellline on day 7, day 13 and day 25 separately (Tzelepis K (2016)), they are further preprocessed by MAGeCK to identify significant essential genes from genome-scale CRISPR knockout screens.</description>
+    </item>
+    
+    <item>
+      <title>Special Usage of HTSanalyzeR2</title>
+      <link>/post/casestudy3/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/post/casestudy3/</guid>
+      <description>Table of Contents  Hypergeometric test with no phenotype Customized gene set An interface to fgsea package Extract shared genes between enriched pathways and input gene list   Hypergeometric test with no phenotype In case if you only have a list of genes and want to do hypergeometric test with gene sets having known functions, HTSanalyzeR2 provides an interface to realize it. Since phenotype is only used as background genes in hypergeometric test, you can manually set all the genes of that species as phenotype and give them a pseudo value to fit HTSanalyzeR2 as below:</description>
+    </item>
+    
+  </channel>
+</rss>

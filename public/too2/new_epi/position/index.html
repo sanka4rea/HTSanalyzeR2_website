@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Table of Contents  Nucleosome Positioning  NuCMap | Nucleosome positioning : Epigenomics nuMap | Nucleosome positioning : Epigenomics ICM | Interactive Chromatin Modeling  MNase-seq analysis  PING nucleR NOrMAL  ATAC-seq analysis  NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis  Find more tools: OMIVTOOLS   Nucleosome Positioning NuCMap | Nucleosome positioning : Epigenomics Maps directly nucleosome centers. NuCMap is based on chemical modification of engineered histones.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/too2/new_epi/position/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="CityU-Bioinformatics">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/too2/new_epi/position/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="CityU-Bioinformatics">
+  <meta property="og:url" content="/too2/new_epi/position/">
+  <meta property="og:title" content="Nucleosome Positioning | CityU-Bioinformatics">
+  <meta property="og:description" content="Table of Contents  Nucleosome Positioning  NuCMap | Nucleosome positioning : Epigenomics nuMap | Nucleosome positioning : Epigenomics ICM | Interactive Chromatin Modeling  MNase-seq analysis  PING nucleR NOrMAL  ATAC-seq analysis  NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis  Find more tools: OMIVTOOLS   Nucleosome Positioning NuCMap | Nucleosome positioning : Epigenomics Maps directly nucleosome centers. NuCMap is based on chemical modification of engineered histones.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-11T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Nucleosome Positioning | CityU-Bioinformatics</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">CityU-Bioinformatics</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#bioinformatics">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Programming</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/program/r">
+                
+                <span>R Language</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorial/getstart/">
+                
+                <span>Getting Started With R</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorial/bms4001/">
+                
+                <span>BMS4001 tutorials</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Database</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/base2/dna">
+                
+                <span>DNA Databases</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/base2/rna">
+                
+                <span>RNA Databses</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tools</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/too2/genomics">
+                
+                <span>Genomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/epigenomics">
+                
+                <span>Epigenomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/transcriptomics">
+                
+                <span>Transcriptomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/proteomics">
+                
+                <span>Proteomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/metabolomics">
+                
+                <span>Metabolomics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/too2/phenomics">
+                
+                <span>Phenomics</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Journals</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/journal/comprehensive">
+                
+                <span>Multidisciplinary</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/specific">
+                
+                <span>Bioinformatics Specific</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/journal/conferences">
+                
+                <span>Conferences</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/server/">
+            
+            <span>Servers</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Nucleosome Positioning</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Nucleosome%20Positioning&amp;url=%2ftoo2%2fnew_epi%2fposition%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2ftoo2%2fnew_epi%2fposition%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftoo2%2fnew_epi%2fposition%2f&amp;title=Nucleosome%20Positioning"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2ftoo2%2fnew_epi%2fposition%2f&amp;title=Nucleosome%20Positioning"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Nucleosome%20Positioning&amp;body=%2ftoo2%2fnew_epi%2fposition%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<hr />
+
+<p><img src="/img/tools/geno/position.jpg" width="600" height="400" alt="position" align="center"></p>
+
+<p><span id="top"></span></p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#nucleosome-positioning">Nucleosome Positioning</a>
+<ul>
+<li><a href="#nucmap-nucleosome-positioning-epigenomics">NuCMap | Nucleosome positioning : Epigenomics</a></li>
+<li><a href="#numap-nucleosome-positioning-epigenomics">nuMap | Nucleosome positioning : Epigenomics</a></li>
+<li><a href="#icm-interactive-chromatin-modeling">ICM | Interactive Chromatin Modeling</a></li>
+</ul></li>
+<li><a href="#mnase-seq-analysis">MNase-seq analysis</a>
+<ul>
+<li><a href="#ping">PING</a></li>
+<li><a href="#nucler">nucleR</a></li>
+<li><a href="#normal">NOrMAL</a></li>
+</ul></li>
+<li><a href="#atac-seq-analysis">ATAC-seq analysis</a>
+<ul>
+<li><a href="#nucleoatac-nucleosome-positionning-analysis-atac-seq-analysis">NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis</a></li>
+</ul></li>
+<li><a href="#find-more-tools-omivtools-https-omictools-com-epigenomics-category">Find more tools: <a href="https://omictools.com/epigenomics-category" target="_blank"><strong>OMIVTOOLS</strong></a></a></li>
+</ul>
+</nav>
+
+
+<h1 id="nucleosome-positioning">Nucleosome Positioning</h1>
+
+<h2 id="nucmap-nucleosome-positioning-epigenomics">NuCMap | Nucleosome positioning : Epigenomics</h2>
+
+<p><p align="justify">Maps directly nucleosome centers. NuCMap is based on chemical modification of engineered histones. It locates nucleosome positions genome-wide on a map in unprecedented detail and accuracy and shows significantly stronger dinucleotide signals in nucleosome DNAs than MNase maps. The tool reveals novel aspects of the in vivo nucleosome organization that are linked to transcription factor (TF) binding, RNA polymerase pausing, and the higher order structure of the chromatin fiber.</p>
+
+<p><a href="http://bioinfo.stats.northwestern.edu/~jzwang/NuCMap.html" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><a href="http://bioinfo.stats.northwestern.edu/~jzwang/NuCMap-manual.pdf" target="_blank"><strong>Documentation</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Brogaard, 2012) <a href="https://www.ncbi.nlm.nih.gov/pubmed/22722846" target="_blank">A map of nucleosome positions in yeast at base-pair resolution</a>.  Nature.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Molecular Biosciences and Department of Chemistry, Northwestern University, Evanston, IL, USA; Department of Statistics, Northwestern University, Evanston, IL, USA</p>
+
+<hr />
+
+<h2 id="numap-nucleosome-positioning-epigenomics">nuMap | Nucleosome positioning : Epigenomics</h2>
+
+<p><p align="justify">Implements the YR and W/S schemes to predict nucleosome positioning at high resolution. This methodology is based on the sequence-dependent anisotropic bending, which dictates how DNA is wrapped around a histone octamer. nuMap allows users to specify a number of options such as schemes and parameters for threading calculation and provides multiple layout formats.</p>
+
+<p><a href="http://numap.rit.edu/app/dna/index.xhtml" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Cui and Zhurkin, 2014) <a href="https://www.ncbi.nlm.nih.gov/pubmed/24153113" target="_blank">Rotational positioning of nucleosomes facilitates selective binding of p53 to response elements associated with cell cycle arrest</a>. Nucleic Acids Res.</li>
+<li>(Cui and Zhurkin, 2010) <a href="https://www.ncbi.nlm.nih.gov/pubmed/20232936" target="_blank">Structure-based analysis of DNA sequence patterns guiding nucleosome positioning in vitro</a>.  J Biomol Struct Dyn.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Thomas H Gosnell School of Life Sciences, Chinahester Institute of Technology, Rochester, NY, USA</p>
+
+<hr />
+
+<h2 id="icm-interactive-chromatin-modeling">ICM | Interactive Chromatin Modeling</h2>
+
+<p><p align="justify">Allows users to assess nucleosome stability and fold sequences of DNA into putative chromatin templates. ICM generates a nucleosome energy level diagram, coarse-grained representations of free DNA and chromatin and plots of the helical parameters (Tilt, Roll, Twist, Shift, Slide and Rise) as a function of position. It uses an elastic model to automatically place nucleosomes. The tool can be used to y assemble models of chromatin that can be employed to rationalize biophysical data, especially spatial relations.</p>
+
+<p><a href="http://dna.engr.latech.edu/icm-du/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Stolz and Bishop, 2010) <a href="https://www.ncbi.nlm.nih.gov/pubmed/20542915" target="_blank">ICM Web: the interactive chromatin modeling web server</a>.  Nucleic Acids Res.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Biostatistics, Tulane University, New Orleans, LA, USA; Centre for Computational Science, Lindy Boggs Centre, Tulane University, New Orleans, LA, USA</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="mnase-seq-analysis">MNase-seq analysis</h1>
+
+<p><p align="justify">The technology of micrococcal nuclease (MNase) digestion combined with high-throughput sequencing (MNase-seq) is a powerful method to map the genome-wide distribution of nucleosome occupancy (Mavrich et al., 2008; Schones et al., 2008; Jiang and Pugh, 2009). Source text: Chen et al., 2014.</p>
+
+<h2 id="ping">PING</h2>
+
+<p><p align="justify">Serves for nucleosome positioning. PING uses MNase-Seq data or MNase - or sonicated - ChIP-Seq data combined with either single-end or paired-end sequencing. It enables nucleosome predictions even in the presence of low read counts. It contains functions for pre-processing and reading raw data. It can handle sonicated and MNase protocols combined with either single-end (SE) or paired-end (PE) sequencing.</p>
+
+<p><a href="http://bioconductor.org/packages/release/bioc/html/PING.html" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><a href="http://bioconductor.org/packages/release/bioc/manuals/PING/man/PING.pdf" target="_blank"><strong>Documentation</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Woo et al., 2013) <a href="https://www.ncbi.nlm.nih.gov/pubmed/23786769" target="_blank">PING 2.0: an R/Bioconductor package for nucleosome positioning using next-generation sequencing data</a>. Bioinformatics.</li>
+<li>(Zhang et al., 2012) <a href="https://www.ncbi.nlm.nih.gov/pubmed/22393380" target="_blank">Probabilistic inference for nucleosome positioning with MNase-based or sonicated short-read data</a>.  PLoS One.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Vaccine and Infectious Diseases and Public Health Sciences Divisions, Fred Hutchinson Cancer Research Center, Seattle, WA, USA; Department of Biostatistics, Johns Hopkins University, Baltimore, MD, USA;</p>
+
+<hr />
+
+<h2 id="nucler">nucleR</h2>
+
+<p><p align="justify">A package for non-parametric nucleosome positioning. nucleR uses a novel aproach in this field which comprises a deep profile cleaning using Fourier Transform and peak scoring for a quick and flexible nucleosome calling.</p>
+
+<p><a href="http://mmb.pcb.ub.es/nucleR/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><a href="http://bioconductor.org/packages/release/bioc/manuals/PING/man/PING.pdf" target="_blank"><strong>Documentation</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Flores and Orozco, 2011) <a href="https://www.ncbi.nlm.nih.gov/pubmed/21653521" target="_blank">nucleR: a package for non-parametric nucleosome positioning</a>.  Bioinformatics.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>IRB-BSC Joint Research Program on Computational Biology, Institute of Research in Biomedicine, Barcelona, Spain</p>
+
+<hr />
+
+<h2 id="normal">NOrMAL</h2>
+
+<p><p align="justify">A command line tool for accurate placing of the nucleosomes. NOrMAL was designed to resolve overlapping nucleosomes and extract extra information (&ldquo;fuzziness&rdquo;, probability, etc.) of nucleosome placement.</p>
+
+<p><a href="http://alumni.cs.ucr.edu/~polishka/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Polishko et al., 2012) <a href="https://www.ncbi.nlm.nih.gov/pubmed/22689767" target="_blank">NORMAL: accurate nucleosome positioning using a modified Gaussian mixture model</a>.  Bioinformatics.</li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Computer Science and Engineering, University of California, Riverside, CA, USA</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<hr />
+
+<h1 id="atac-seq-analysis">ATAC-seq analysis</h1>
+
+<p><p align="justify">ATAC-seq allows simultaneous interrogation of factor occupancy, nucleosome positions in regulatory sites, and chromatin accessibility genome wide by considering the position of insertion and the distribution of insert lengths captured during the transposition reaction.</p>
+
+<h2 id="nucleoatac-nucleosome-positionning-analysis-atac-seq-analysis">NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis</h2>
+
+<p><p align="justify">A python package for nucleosome-positioning using as basis the highly structured pattern of DNA fragment lengths and positions around nucleosomes. NucleoATAC can identify the rotational and translational positions of nucleosomes with up to base-pair resolution and provide quantitative measures of nucleosome occupancy in Schizosaccharomyces cerevisiae, Schizosaccharomyces pombe and human cells. NucleoATAC can be used to analyze sequence features underlying nucleosome positioning, to promote chromatin architecture across species, to identify transient changes in nucleosome occupancy and to asses positioning during a dynamic cellular response.</p>
+
+<p><a href="http://nucleoatac.readthedocs.io/en/latest/" target="_blank"><strong>Official Website</strong></a></p>
+
+<p><a href="https://github.com/GreenleafLab/NucleoATAC" target="_blank"><strong>Github</strong></a></p>
+
+<p><a href="http://nucleoatac.readthedocs.io/en/latest/#nucleoatac-documentation" target="_blank"><strong>Documentation</strong></a></p>
+
+<p><strong>Publications</strong>:</p>
+
+<ul>
+<li>(Schep et al., 2015) <a href="https://www.ncbi.nlm.nih.gov/pubmed/26314830" target="_blank">Structured nucleosome fingerprints enable high-resolution mapping of chromatin architecture within regulatory regions</a>.  Genome Res.<br /></li>
+</ul>
+
+<p><strong>Institutions(s)</strong>:</p>
+
+<p>Department of Genetics, Stanford University School of Medicine, Stanford, CA, USA; Biophysics Program, Stanford University School of Medicine, Stanford, CA, USA; Department of Applied Physics, Stanford University, Stanford, CA, USA</p>
+
+<p><a href="#top"><i class="fa fa-hand-o-up fa-1x "></i>Top</a></p>
+
+<h1 id="find-more-tools-omivtools-https-omictools-com-epigenomics-category">Find more tools: <a href="https://omictools.com/epigenomics-category" target="_blank"><strong>OMIVTOOLS</strong></a></h1>
+
+<p><a href="https://www.nature.com/articles/nbt.1685" target="_blank"><em>Image Citation</em></a></p>
+
+<hr />
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/epigenomics" target="_blank">epigenomics</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/too2/new_epi/dna_pro/">DNA-Protein Interactions</a></li>
+        
+        <li><a href="/too2/new_epi/modifications/">DNA Modifications</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

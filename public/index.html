@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="author" content="Computational Biology Lab">
+
+  
+  
+  
+  
+  <meta name="description" content="">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="HTSanalyzeR2">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="HTSanalyzeR2">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="HTSanalyzeR2">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="HTSanalyzeR2">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="og:updated_time" content="2018-04-11T00:00:00&#43;08:00">
+  
+
+  
+
+  <title>HTSanalyzeR2</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">HTSanalyzeR2</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#hero" data-target="#hero">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Tutorials</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tutorials/casestudy1" data-target="/tutorials/casestudy1">
+                
+                <span>Case Study1</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorials/casestudy2" data-target="/tutorials/casestudy2">
+                
+                <span>Case Study2</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/tutorials/casestudy3" data-target="/tutorials/casestudy3">
+                
+                <span>Case Study3</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Resources</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/resources/prepro" data-target="/resources/prepro">
+                
+                <span>Preprocessing</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/resources/hyper" data-target="/resources/hyper">
+                
+                <span>Hypergeometrics</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/resources/es" data-target="/resources/es">
+                
+                <span>Enrichment Subnetwork</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Support</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/support/" data-target="/support/">
+                
+                <span>Supported Analysis</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/support/" data-target="/support/">
+                
+                <span>Data Type</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/support/" data-target="/support/">
+                
+                <span>Supported Pathways</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/support/" data-target="/support/">
+                
+                <span>Supported Species</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/support/" data-target="/support/">
+                
+                <span>Visualization</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            
+            <span>Term of service</span>
+            
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/service/session" data-target="/service/session">
+                
+                <span>Session info</span>
+                
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="/service/ref" data-target="/service/ref">
+                
+                <span>References</span>
+                
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about" data-target="#about">
+            
+            <span>Contact us</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<span id="homepage" style="display: none"></span>
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+
+
+
+<section id="hero" class="hero-overlay" style="
+
+background-color: #666;
+
+
+background-image:
+linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+url('/img/headers/hts.png');
+
+;">
+
+  <div class="container">
+
+    <h1 class="hero-title" itemprop="headline">
+      HTSanalyzeR2
+    </h1>
+
+    
+    <p class="hero-lead">This package provides gene set over-representation, gene set enrichment analysis and enriched
+subnetwork analyses. 🚀
+<br>
+<small></small>
+<br><br>
+<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=CityUHK-CompBio&amp;repo=HTSanalyzeR2&amp;type=website&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe></p>
+
+<script type="text/javascript">
+  ();  
+  
+</script>
+</p>
+    
+
+    
+    <p><a href="https://github.com/CityUHK-CompBio/HTSanalyzeR2" class="btn btn-light btn-outline btn-large"><i class="fa fa-link"></i> -Image Citation</a></p>
+    
+
+  </div>
+
+</section>
+
+  
+
+  
+  
+  
+  <section id="Tutorial" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+
+    <h1>Tutorials</h1>
+    <p>Porvide 3 case study for reference</p>
+    
+
+  </div>
+  <div class="col-xs-12 col-md-8">
+
+    
+
+    
+      
+
+      
+      
+
+        
+
+        
+        
+
+        
+        
+          
+      
+
+      
+      
+        
+        
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2016-04-20 00:00:00 &#43;0800 CST" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    13 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+  
+  
+  <a href="/post/casestudy1/" >
+    
+    
+      <img src="/img/tutorials/case1.png" class="article-banner" itemprop="image">
+    
+  </a>
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="/post/casestudy1/" itemprop="url" >Case Study 1: Single dataset analysis for gene expression data</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    <p>This case study uses <strong>HTSanalyzeR2</strong> to perform gene set over-representation analysis, enrichment analysis and enriched subnetwork analyses on a common gene expression profile.</p>
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/casestudy1/" class="btn btn-primary btn-outline" target="_blank">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+
+      
+
+        
+
+        
+        
+
+        
+        
+          
+      
+
+      
+      
+        
+        
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2016-04-20 00:00:00 &#43;0800 CST" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+  
+  
+  <a href="/post/casestudy2/" >
+    
+    
+      <img src="/img/tutorials/case2.jpg" class="article-banner" itemprop="image">
+    
+  </a>
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="/post/casestudy2/" itemprop="url" >Case Study 2: Time series analysis for CRISPR data</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    <p>hi</p>
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/casestudy2/" class="btn btn-primary btn-outline" target="_blank">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+
+      
+
+        
+
+        
+        
+
+        
+        
+          
+      
+
+      
+      
+        
+        
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2016-04-20 00:00:00 &#43;0800 CST" itemprop="datePublished dateModified">
+      Apr 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Computational Biology Lab">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+  
+  
+  <a href="/post/casestudy3/" >
+    
+    
+      <img src="/img/tutorials/case3.jpg" class="article-banner" itemprop="image">
+    
+  </a>
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="/post/casestudy3/" itemprop="url" >Special Usage of HTSanalyzeR2</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    <p>hi</p>
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="/post/casestudy3/" class="btn btn-primary btn-outline" target="_blank">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+
+      
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="resources" class="home-section">
+    <div class="container">
+      
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Resources</h1>
+    <p>Contains the preprocessing, Hypergeometrics, Enrichment Subnetwork</p>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    
+    
+    <span class="hidden default-project-filter">.preprocessing</span>
+    
+
+    
+    
+    <div class="project-toolbar">
+      <div class="project-filters">
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            
+              <a href="#" data-filter=".preprocessing" class="btn btn-primary btn-large active" target="_blank">Preprocessing</a>
+            
+              <a href="#" data-filter=".Hypergeometric" class="btn btn-primary btn-large" target="_blank">Hypergeometrics</a>
+            
+              <a href="#" data-filter=".Enrichment" class="btn btn-primary btn-large" target="_blank">Enrichment Subnetwork</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+
+    <div class="row isotope projects-container js-layout-masonry">
+
+      
+      
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 project-item isotope-item preprocessing">
+        <div class="card">
+          
+          <a href="/resources/prepro/" title="" class="card-image hover-overlay"
+              target="_blank">
+            <img src="/img/resources/preprocessing.png" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/resources/prepro/"  target="_blank">Preprocessing</a></h4>
+            <div class="card-desription">
+              <p>a preprocess step including invalid input data removing, duplication removing, initial gene identifiers converting to Entrez ID and phenotype ordering.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 project-item isotope-item Hypergeometric">
+        <div class="card">
+          
+          <a href="/resources/hyper/" title="" class="card-image hover-overlay"
+              target="_blank">
+            <img src="/img/resources/hyper.png" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/resources/hyper/"  target="_blank">Hypergeometric test</a></h4>
+            <div class="card-desription">
+              <p>This part will briefly introduce Hypergeometric Distribution and the test.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 project-item isotope-item Enrichment">
+        <div class="card">
+          
+          <a href="/resources/es/" title="" class="card-image hover-overlay"
+              target="_blank">
+            <img src="/img/resources/fig5.png" alt="" class="img-responsive">
+          </a>
+          
+          <div class="card-text">
+            <h4><a href="/resources/es/"  target="_blank">Enriched subnetwork analysis</a></h4>
+            <div class="card-desription">
+              <p>You can also perform subnetwork analysis (Beisser (2010), Dittrich MT (2008)) to extract the subnetwork enriched with nodes which are associated with a significant phenotype using HTSanalyzeR2.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="about" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Contact us</h1>
+    <p>Please contact to Correcting error and/or Giving advices. Thanks!</p>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    <ul class="fa-ul" itemscope>
+
+      
+      <li>
+        <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
+        <span id="person-email" itemprop="email"><a href="mailto:linqi23-c@my.cityu.edu.hk">linqi23-c@my.cityu.edu.hk</a></span>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span id="person-address" itemprop="address">Dr.Xin Wang's Lab. <br>Room 315, Block 2, To Yuen Building, City University of Hong Kong, Hong Kong</span>
+      </li>
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-clock-o fa-2x" aria-hidden="true"></i>
+        <span>10:00 to 17:00 on workdays</span>
+      </li>
+      
+
+    </ul>
+
+    
+    <div class="hidden">
+      <input id="map-provider" value="1">
+      <input id="map-lat" value="22.334923">
+      <input id="map-lng" value="114.173542">
+      <input id="map-dir" value="Dr.Xin Wang&#39;s Lab. &lt;br&gt;Room 315, Block 2, To Yuen Building, City University of Hong Kong, Hong Kong">
+      <input id="map-zoom" value="15">
+      <input id="map-api-key" value="AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo">
+    </div>
+    <div id="map"></div>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Copyright© 2018 Lin QI of Dr.Xin Wang's Lab. zzx. All rights reserved. 
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD3AGpKDAfo_LjBRHd-YkYmMjBDlIHfdlo"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
+

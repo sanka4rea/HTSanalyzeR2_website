@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Too2s on CityU-Bioinformatics</title>
+    <link>/too2/</link>
+    <description>Recent content in Too2s on CityU-Bioinformatics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/too2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bioimaging</title>
+      <link>/too2/new_pheno/bioimaging/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_pheno/bioimaging/</guid>
+      <description>Table of Contents  Microscopic Phenotype Analysis  Microscopic Image Formats Management  OMERO | OME Remote Objects SCIFIO | SCientific Image Format Input and Output  PheWAS  PheWAS | Phenome-wide association study SPAtest   Laser Scanning Microscopy  FISH  ImageJ GoIFISH  Colocalization Analysis  BioImageXD ViBE-Z | Virtual Brain Explorer for Zebrafish  3D Image Analysis  u-track UltraTracer   Conventional Fluorescence microscopy  High-throughput Screening  histoCAT | HIStology TOpography Cytometry Analysis Toolbox CellProfiler  Cell Phenotyping  PhenoRipper histoCAT | HIStology TOpography Cytometry Analysis Toolbox   Super-resolution Imaging  Morphometric Analysis  MIB | Microscopy Image Browser BioImageXD  Single Molecule Detection and Localization  rapidSTORM ViSP   Cryo-EM  Neuron Tracing  UltraTracer webKnossos  Single Particle Analysis  EMAN  National Center for Macromolecular Imaging, The Verna and Marrs McLean Department of Biochemistry and Molecular Biology, Baylor College of Medicine, One Baylor Plaza, Houston, TX, USA  EMRinger   Find more tools: OMICTOOLS   Microscopic Phenotype Analysis Microscopic phenotype analysis deals with all tools usefull for describing, identifying or classifying phenotypes at microscopic scale.</description>
+    </item>
+    
+    <item>
+      <title>DNA Modifications</title>
+      <link>/too2/new_epi/modifications/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/modifications/</guid>
+      <description>Table of Contents  DNA modification analysis  DNA Methylation Prediction  T-BioInfo MethSurv Nanopolish  DNA Methylation Deconvolution  FaST-LMM-EWASher ReFACTor | Reference-Free Adjustment for Cell-Type composition EDec | Epigenomic Deconvolution   DNA methylation array analysis  Differential Methylation Site Detection  limma | Linear Models for Microarray Data FastDMA RnBeads  Differential Methylation region Detection  ChAMP FastDMA RnBeads   Enrichment Analysis  Over-representation analysis  Blast2GO g:Profiler STEM | Short Time-series Expression Miner  Gene set enrichment analysis  GSEA | Gene Set Enrichment Analysis DESeq | Differential expression : HTS analysis edgeR | empirical analysis of DGE in R  Topology enrichment analysis  DAVID | Database for Annotation, Visualization and Integrated Discovery HOMER | Hypergeometric Optimization of Motif EnRichment GeneCodis | Topology enrichment analysis   Bisulfite Sequencing Data Analysis (BS-seq analysis)  Differential Methylation region Detection  methylKit | Methylation annotation : BS-seq analysis SMART | Specific Methylation Analysis and Report Tool DSS-single | Differentially methylated region detection : BS-seq analysis  Methylation Annotation  GBSA | Genome Bisulfite Sequencing Analyser methylKit | Methylation annotation : BS-seq analysis  EWAS  ReFACTor | Reference-Free Adjustment for Cell-Type composition FaST-LMM-EWASher   Find more tools: OMICTOOLS   DNA modification analysis Whole genome DNA methylation detection is one of the most important part of epigenetics research.</description>
+    </item>
+    
+    <item>
+      <title>Genome Annotation</title>
+      <link>/too2/new_geno/anno/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/anno/</guid>
+      <description>Table of Contents  Genome Annotation  Gene Ontology Annotation  BLASTX Blast2GO  GO Semantic Similarity Analysis  G-SESAME | Gene Semantic Similarity Analysis and Measurement Tools clusterProfiler | GO semantic similarity analysis : Genome annotation GOToolBox | GO semantic similarity analysis : DNA sequence analysis SML-Toolkit | Semantic Measures Library Toolkit  Promoter Predication  FirstEF | First Exon Finder CpGpromoter PROmiRNA  Annotation Workflows  RAST | Rapid Annotation using Subsystem Technology Prokka | Annotation workflows BlastKOALA   Find more tools: OMICTOOLS   Genome Annotation Genome annotation is a key process for identifying the coding and non-coding regions of a genome, gene locations and functions.</description>
+    </item>
+    
+    <item>
+      <title>Metabolic Profiles</title>
+      <link>/too2/new_meta/profiles/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_meta/profiles/</guid>
+      <description>Table of Contents  Metabolic profiles analysis  Metabolic Network analysis  BLASTX PiMP | Polyomics integrated Metabolomics Pipeline  Metabolite enrichment analysis  MetScape | Data integration : Mass spectrometry analysis FELLA | Metabolite enrichment analysis   MS-based untargeted Metabolomics  mGWAS  MWASTools | mGWAS RegScan   NMR-based Metabolomics/MS-based targeted metabolomics  Spectral corrections  NMRPipe NMRPro  Spectral deconvolution  NMRPipe BATMAN | Bayesian AuTomated Metabolite Analyser for NMR data  Chemometric analysis  MetaboAnalyst speaq | spectrum alignment and quantitation  Metabolite identification  W4M | Workflow4Metabolomics MetaboAnalyst   Find more tools: OMICTOOLS   Metabolic profiles analysis The further development of spectroscopic and spectrometric tools for high throughput analyses of selected biochemical pathways is crucial to the acquisition of metabolome data sets of sufficient quality for metabonomics and metabolomics.</description>
+    </item>
+    
+    <item>
+      <title>Protein Sequence/Expression</title>
+      <link>/too2/new_proteo/pro_seq/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_proteo/pro_seq/</guid>
+      <description>Table of Contents  Protein Sequence Analysis  Amino Acid Repeat Prediction  RADAR REPRO  Subcellular Localizaton Prediction  TargetP pRoloc  Protein Clustering  CD-HIT USEARCH   MS-based (Mass Spectrometry) untargeted Proteomics  2D gel Image Analysis  digeR Plasmo2D  In Silico Analysis  OpenMS multiplierz  Phosphorylation Site Assignment  Ascore Phosphonormalizer  PTM Identification  PIQED SUMmOn  Glycosylation Identification  SugarQb MAGIC   MS-based Metaproteomics    Unipept MPA   Antibody Array Analysis    PANDA   Find more tools: OMICTOOLS   Protein Sequence Analysis Protein sequence analysis tools are used to predict specific functions, activities, origin, or localization of proteins based on their amino-acid sequence.</description>
+    </item>
+    
+    <item>
+      <title>RNA Transcription</title>
+      <link>/too2/new_trans/transcription/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/transcription/</guid>
+      <description>Table of Contents  Transcription analysis  Prognostic Biomarker Identification  KM plotter cBioPortal  Region Discrimination  CPC CNCI  Gene co-expression prediction  GeneMANIA WGCNA  Gene regulatory network inference  NIR GRAM  Gene set enrichment analysis  GSEA DAVID   RNA-seq analysis  Gene fusion detection  Segemehl Subread  Alternative splicing events identification  Cufflinks   Gene expression array analysis  Prognostic biomarker identification  KM plotter cBioPortal  Differential expression  DESeq agriGO   Metatranscriptomic sequencing analysis  Prediction-base Taxonomic  MetaBAT  Homology-Based Taxonomic  MEGAN | MEtaGenome ANalyzer   Find more tools: OMICTOOLS   Transcription analysis Transcript abundance is in many ways an extraordinary phenotype, with special attributes that confer particular importance on an understanding of its genetics.</description>
+    </item>
+    
+    <item>
+      <title>DNA Structure</title>
+      <link>/too2/new_geno/dnastr/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/dnastr/</guid>
+      <description>Table of Contents  DNA Structure  Shape prediction  do_x3dna 3DNA DINAMelt DNAshape  R-loop forming sequence prediction  QmRLFS-finder  DNA Structure Database  R-loopDB | R-loop forming sequence databases  Small-angle Scattering  AXES FoXS AquaSAXS   Find more tools: OMICTOOLS   DNA Structure DNA molecules exist in many different conformations, including A-DNA, B-DNA, or Z-DNA forms, which depend on the nucleotide sequence, hydratation level, presence of metal ions, etc.</description>
+    </item>
+    
+    <item>
+      <title>Lipidomics</title>
+      <link>/too2/new_meta/lipidomics/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_meta/lipidomics/</guid>
+      <description>Table of Contents  Lipidomics Databases  LIPID MAPS | LIPID Metabolites And Pathways Strategy LipidBlast | Lipidomic spectral libraries : Lipidomics databases  MS-based untargeted lipidomics  LipidMatch | Lipid identification : MS-based untargeted lipidomics Quantinetix | Image signal quantification : Mass spectrometry  MS-based targeted lipidomics  MRMPROBS | Multiple Reaction Monitoring-based PROBabilistic System MRM-DIFF | Multiple Reaction Monitoring-based DIFFerential  Find more tools: OMICTOOLS   Lipidomics or profiling specific classes of lipids biomarkers also provides a unique opportunity to identify diseases other than cancer.</description>
+    </item>
+    
+    <item>
+      <title>Low-level RNA detection</title>
+      <link>/too2/new_trans/lowlevel/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/lowlevel/</guid>
+      <description>Table of Contents  Low-level RNA detection    Patch-seq RRR | Patch-seq Reduced-Rank Regression   scRNA-seq analysis  Noise reduction  scLVM | single-cell Latent Variable Model OEFinder URSM | Unified RNA-Sequencing Model  Transcript quantification  TraCeR BRIE | Bayesian Regression for Isoform Estimation UMIS | Unique Molecular IdentifierS  Cell lineage and pseudotime inference/ Marker gene detection  Seurat SPADE | Spanning tree Progression of Density normalized Events Monocle   Single-cell qPCR    DPT MAST | Model-based Analysis of Single-cell Transcriptomics SCATTOME | Single Cell Analysis of Targeted TranscriptOME   dPCR    ddPCRclust Definetherain ddpcr | droplet digital polymerase chain reaction   Find more tools: OMICTOOLS   Low-level RNA detection Patch-seq RRR | Patch-seq Reduced-Rank Regression Provides an interpretable visualization of the relationship between high-dimensional single cell transcriptomes and electrophysiological information obtained using techniques like patch-seq.</description>
+    </item>
+    
+    <item>
+      <title>Medical Imaging</title>
+      <link>/too2/new_pheno/medicalimage/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_pheno/medicalimage/</guid>
+      <description>Table of Contents  Medical Phrnotype Analysis  Clinical Risk Prediction  RICORDO | Researching Interoperability using Core Reference Datasets  Department of Genetics, University of Cambridge, Cambridge, UK  comoRbidity  Clinical Simulation  LMG | Lumbar Model Generator PIPER Child HBM   Magnetic Resonance Imaging (MRI)  DICOM files management  DicomBrowser | DICOM files management : Magnetic resonance imaging MIPAV | Medical Image Processing Analysis and Visualization   Computerized Tomography Scan Imaging (CT)  Phantom Imaging  CTSim | Computed Tomography Simulator  Image Format Management  NiBabel   Nuclear Medicine Imaging  3D Image Reconstruction  STIR | Software for Tomographic Image Reconstruction NiftyPET  Kinetic Analysis  QModeling | Kinetic analysis : Nuclear medicine imaging   Find more tools: OMICTOOLS   Medical Phrnotype Analysis Macroscopic phenotype analysis deals with all tools usefull for describing, identifying or classifying phenotypes at macroscopic scale.</description>
+    </item>
+    
+    <item>
+      <title>Nucleosome Positioning</title>
+      <link>/too2/new_epi/position/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/position/</guid>
+      <description>Table of Contents  Nucleosome Positioning  NuCMap | Nucleosome positioning : Epigenomics nuMap | Nucleosome positioning : Epigenomics ICM | Interactive Chromatin Modeling  MNase-seq analysis  PING nucleR NOrMAL  ATAC-seq analysis  NucleoATAC | Nucleosome positionning analysis : ATAC-seq analysis  Find more tools: OMIVTOOLS   Nucleosome Positioning NuCMap | Nucleosome positioning : Epigenomics Maps directly nucleosome centers. NuCMap is based on chemical modification of engineered histones.</description>
+    </item>
+    
+    <item>
+      <title>Prediction of Protein Structure</title>
+      <link>/too2/new_proteo/structure/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_proteo/structure/</guid>
+      <description>Table of Contents  Primary structure  ProtParam COILS  Secondary structure  PredictProtein PSIPRED  tertiary structure  Phyre Swiss-PdbViewer  Find more tools: OMICTOOLS   Primary structure Protein primary structure is the linear sequence of amino acids in a peptide or protein. By convention, the primary structure of a protein is reported starting from the amino-terminal (N) end to the carboxyl-terminal &amp;copy; end. Protein biosynthesis is most commonly performed by ribosomes in cells.</description>
+    </item>
+    
+    <item>
+      <title>Computational Neuroinformatics</title>
+      <link>/too2/new_pheno/neuroinformatics/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_pheno/neuroinformatics/</guid>
+      <description>Table of Contents  Biological Steps  Realistic Neuronal Network Modelling  The Virtual Brain Brian  Compartment Neuron modelling  NEURON neuroConstruct   File Manipulation  Model Files Conversion  SBML2LaTeX Sbmlharvester  Model Files Visualization  SBMLToolbox SBMLEditor  Model Building  NeuroManager PyNN   Find more tools: OMICTOOLS   Modelling in computational neuroscience is becoming a crucial tool for understanding how experimentally observed properties of neural systems emerge from lower-level biophysical processes.</description>
+    </item>
+    
+    <item>
+      <title>Drug Discovery</title>
+      <link>/too2/new_meta/drug/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_meta/drug/</guid>
+      <description>Table of Contents  Drug Discovery  Drug-drug interaction prediction  DDI-CPI | Drug-Drug Interaction via Chemical-Protein Interactome Hierarchical RNNs model-based DDI extraction  Ligand-based Virtual Screening  FTrees | Feature Trees Frog | FRee On line druG conformation generation  Drug Repositioning  DRRS | Drug repositioning recommendation system MANTRA | Mode of Action by NeTwoRk Analysis  Chemical Toxicity  ChemDes | Chemical toxicity : Drug design  Molecular editors  Bioclipse | Molecule editors : Drug design MCCE | Multi-Conformation Continuum Electrostatics   Find more tools: OMICTOOLS   Drug Discovery In the fields of medicine, biotechnology and pharmacology, drug discovery is the process by which new candidate medications are discovered.</description>
+    </item>
+    
+    <item>
+      <title>Genome Editing</title>
+      <link>/too2/new_geno/edit/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/edit/</guid>
+      <description>Table of Contents  Genome Editing  CRISPR/Cas9 sgRNA Design  CRISPR design GuideScan E-CRISP CRISPRscan  TALEN design  TALE-NT TALEN Targeter  ZFN Design  Zinc Finger Tools ZifNN ZFN-Site  CRISPR/Cas9 Screen Analysis  CREATE | CRISPR-enabled trackable genome engineering MAGeCK | Model-based Analysis of Genome-wide CRISPR/Cas9 Knockout MAGeCK-VISPR caRpools | CRISPR-AnalyzeR for pooled screens  Genome Editing Database  Find more tools: OMICTOOLS   Genome Editing Programmable nucleases - including zinc-finger nucleases (ZFNs), transcription activator-like effector nucleases (TALENs) and RNA-guided engineered nucleases (RGENs) derived from the bacterial clustered regularly interspaced short palindromic repeat (CRISPR)-Cas (CRISPR-associated) system - enable targeted genetic modifications in cultured cells, as well as in whole animals and plants.</description>
+    </item>
+    
+    <item>
+      <title>Immune System</title>
+      <link>/too2/new_proteo/immune/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_proteo/immune/</guid>
+      <description>Table of Contents  Immune System Analysis  Sequence-based B-cell Epitope Prediction  ABCpred BepiPred  Structure-based B-cell Epitope Prediction  LYRA  MHC Class I Epitope Prediction  ProPred1 GradDock  MHC Class II Epitope Prediction  HLAMatchmaker ProPred   Flow Cytometry  Cell Population Identification  FCS Express FlowJo   Mass Cytometry  SPADE (Spanning tree Progression of Density normalized Events viSNE | Data visualization : Flow cytometry  Find more tools: OMICTOOLS   Immune System Analysis Immunoinformatics involves the application of computational methods to immunological problems.</description>
+    </item>
+    
+    <item>
+      <title>RNA Modifications</title>
+      <link>/too2/new_trans/rnamodification/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/rnamodification/</guid>
+      <description>Table of Contents  RNA Modifications Analysis  Protein-binding Region Prediction  RNAcompete catRAPID omics RBPmap  Alternative Splicing Annotation  APPRIS rPGA Exogean  RNA Methylation Prediction  SRAMP iRNAm5C-PseDNC m6Apred   Methylated RNA Immunoprecipitation Sequencing Data Analysis (MeRIP-seq Analysis)  Spliced Read Alignment  TopHat HISAT | Hierarchical Indexing for Spliced Alignment of Transcripts Subread  Peak Calling  ExomePeak | Peak calling : MeRIP-seq analysis MeTPeak  De novo motif discovery  Weeder HOMER | Hypergeometric Optimization of Motif EnRichment MEME Suite   Degradome-seq Analysis    sPARTA package CleaveLand   Find more tools: OMICTOOLS   RNA Modifications Analysis From a biosynthetic point of view, the roughly 100 known different RNA nucleotide modifications can be easily divided according to their complexity.</description>
+    </item>
+    
+    <item>
+      <title>Metabolic Engineering</title>
+      <link>/too2/new_meta/engineer/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_meta/engineer/</guid>
+      <description>Table of Contents  Biological Steps  Constraint based methods  fastcore COBRA Toolbox | COnstraints Based Reconstruction and Analysis  Metabolic pathway prediction  EC-BLAST RetroPath  Strain design  Biopathway Predictor cRegMCSs | constrained regulatory MCSs  Thermodynamics  SSTMap | Solvation Structure and Thermodynamic Mapping von Bertalanffy   13C-fluxomics  COBRA Toolbox | COnstraints Based Reconstruction and Analysis C13 | 13C-fluxomics : Metabolomics  Find more tools: OMICTOOLS   Growing concerns over limited fossil resources and associated environmental problems are motivating the development of sustainable processes for the production of chemicals, fuels and materials from renewable resources.</description>
+    </item>
+    
+    <item>
+      <title>Neorophysiology</title>
+      <link>/too2/new_pheno/neurophysiology/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_pheno/neurophysiology/</guid>
+      <description>Table of Contents  Neurophysiology Analysis  PyNWB VERTEX | Virtual Electrode Recording Tool for EXtracellular potentials  Clinical Eletrophysiology  Spike Sorting  NEV2lkit Spyke Viewer  Image Data Analysis  MNE-Python EEGLAB  Data Management and Annotation  NDManager   Patch-clamp  RTXI | Real-Time eXperiment Interface NeuroMatic  Find more tools: OMICTOOLS   Neurophysiology Analysis The techniques used in experimental neurophysiology have grown in complexity with the development of new technology.</description>
+    </item>
+    
+    <item>
+      <title>Population Genomics</title>
+      <link>/too2/new_geno/population/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/population/</guid>
+      <description>Table of Contents  Popilation Genetic Analysis  Pedigree Reconstruction  Prest-plus FRANz RELPAIR  Forward Simulation  SeqSIMLA SeDuS SFS_CODE  Population Structure Inference  STRUCTURE PCAngsd PSIKO   Genotyping by Sequencing data analysis (GBS Analysis)  Base Callling  PyroBayes Alta-Cyclic freeIbis  Read Quality Contorl  Trim Galore! MultiQC Octopus-toolkit  Adapter trimming  Trim Galore! dDocent  Gerline SNP Detection  GATK SAMtools dDocent  Somatic SNV detection  GATK SAMtools SNooPer   Restriction Site Associated DNA Sequencing Data Analysis (RAD-seq Analysis)  Phylogenetic Inference  MEGA GPSit AnGST  SNP/SNV Annotation  ANNOVAR wANNOVAR DNAscan   Find more tools: OMICTOOLS</description>
+    </item>
+    
+    <item>
+      <title>Protein Interactions</title>
+      <link>/too2/new_proteo/interactions/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_proteo/interactions/</guid>
+      <description>Table of Contents  Protein Interactions Analysis  Protein-DNA Interaction Prediction  LigParGen | Protein-ligand docking : Protein interaction analysis DBSI | DNA Binding Site Identifier  Protein-RNA Interaction Prediction  HADDOCK | High Ambiguity Driven protein-protein DOCKing Global Score | Protein-RNA interactions  Drug-target Interaction Prediction  Open Targets | Drug-target interaction prediction : Protein interaction analysis PiHelper | Drug-target interaction prediction : Protein interaction analysis  Protein-protein Interaction Prediction  mentha | Protein-protein interaction prediction : Protein interaction analysis compPASS | comparative proteomic analysis software suite  Protein-ligand Docking  UCSF Chimera  Protein-protein Docking  PIPER | Protein-protein docking : Protein interaction analysis HADDOCK | High Ambiguity Driven protein-protein DOCKing   Find more tools: OMICTOOLS   Protein Interactions Analysis Proteins interact with nucleic acids, other proteins, ligands, metal ions, to exert their biological functions.</description>
+    </item>
+    
+    <item>
+      <title>RNA-Protein Interactions</title>
+      <link>/too2/new_trans/rna_pro/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/rna_pro/</guid>
+      <description>Table of Contents  CLIP-seq Analysis  Peak Calling  DFilter CLIPper  Motif Discovery  RNAmotifs MEMERIS  miRNA Target Site Detection  MicroMUMMIE MIRZA   Ribo-seq Analysis  Ribosome P-site Localization  RiboProfiling riboWaltz  Ribosome Stalling Prediction  ROSE  Translated ORF Prediction  ORF-RATER   Find more tools: OMICTOOLS   CLIP-seq Analysis Cross-Linking Immunoprecipitation associated to high-throughput sequencing (CLIP-seq) is a technique used to identify RNA directly bound to RNA-binding proteins across the entire transcriptome in cell or tissue samples.</description>
+    </item>
+    
+    <item>
+      <title>Brain Connectomics</title>
+      <link>/too2/new_pheno/brain/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_pheno/brain/</guid>
+      <description>Table of Contents  Connectivity Analysis  Functional Brain Connectivity  BCT | Brain Connectivity Toolbox WholeBrain  Structural Brain Connectivity  BNRR WholeBrain   Functional Magnetic Resonance Imaging (fMRI)  3D Image Surfacing  ANTs | Advanced Normalization Tools Surfing | 3D image surfacing   Diffusion Magnetic Resonance Imaging Analysis  Tractography  SlicerDMRI Dipy | Diffusion Imaging in Python   Neuron Tracing  NeurphologyJ | Neuron tracing : Bioimaging analysis Vaa3D | 3D Visualization-Assisted Analysis  Find more tools: OMICTOOLS   Connectivity Analysis The functional organization of the brain is characterized by segregation and integration of information being processed.</description>
+    </item>
+    
+    <item>
+      <title>DNA-Protein Interactions</title>
+      <link>/too2/new_epi/dna_pro/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_epi/dna_pro/</guid>
+      <description>Table of Contents  HT-SELEX Analysis    AptaTools SelexGLM   DNase-seq Analysis    HOMER DFilter   ChIP-seq Analysis  De novo assembly  denovochipseq  Peak calling  HOMER MACS SICER  Differential peak calling  DiffBind GenoGAM MAnorm  De novo motif discovery  HOMER Weeder kmerHMM   Find more tools: OMICTOOLS   DNA-binding proteins are proteins that have DNA-binding domains and thus have a specific or general affinity for single- or double-stranded DNA.</description>
+    </item>
+    
+    <item>
+      <title>DNA-Protein Interactions</title>
+      <link>/too2/new_geno/dna_pro/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/dna_pro/</guid>
+      <description>Table of Contents  HT-SELEX Analysis  AptaTools SelexGLM  DNase-seq Analysis  HOMER DFilter  ChIP-seq Analysis  De novo assembly  denovochipseq  Peak calling  HOMER MACS SICER  Differential peak calling  DiffBind GenoGAM MAnorm  De novo motif discovery  HOMER Weeder kmerHMM   Find more tools: OMICTOOLS   DNA-binding proteins are proteins that have DNA-binding domains and thus have a specific or general affinity for single- or double-stranded DNA.</description>
+    </item>
+    
+    <item>
+      <title>Membrane Protein</title>
+      <link>/too2/new_proteo/membrane/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_proteo/membrane/</guid>
+      <description>Table of Contents  Membrane Protein Analysis  Membrane Simulation  CHARMM-GUI Membrane Builder | Membrane simulation : Membrane protein analysis  Transmembrane Beta-barrel Prediction  PROFtmb | Transmembrane beta-barrel prediction : Membrane protein analysis PRED-TMBB | Transmembrane beta-barrel prediction : Membrane protein analysis  Transmembrane Helix Prediction  CCTOP | Consensus Constrained TOPology prediction SignalP   FRAP  easy-FRAP | FRAP : Laser scanning microscopy PyFRAP | Python Fluorescence Recovery After Photobleaching  Find more tools: OMICTOOLS   Membrane Protein Analysis Membrane and transmembrane proteins are key component of cell signaling.</description>
+    </item>
+    
+    <item>
+      <title>Non-Coding RNA</title>
+      <link>/too2/new_trans/non_coding/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_trans/non_coding/</guid>
+      <description>Table of Contents  Non-Coding RNA Analysis  miRNA Target Prediction  TargetScan PicTar psRNATarget  miRNA Enrichment  DIANA-miRPath FAME | Functional Assignment of MicroRNAs via Enrichment miTEA  miRNA-disease Association Prediction  miRPD MCMG  RNAi Reagent Design  RNAxs WMD | Web MicroRNA Designer E-RNAi  High-throughput RNAi Screening  cellHTS CARD   Small RNA sequencing Data analysis (sRNA-seq Analysis)  tRNA-derived RNA Annotation  tRF2Cancer HAMR  ncRNA Identification  miRDeep omiRas  IsomiR detection  DeAnnIso isomiR-SEA   miRNA Array analysis    InCroMAP AgiMicroRna   Find more tools: OMICTOOLS   Non-Coding RNA Analysis Noncoding RNAs (ncRNAs) accomplish a remarkable variety of biological functions.</description>
+    </item>
+    
+    <item>
+      <title>Phylogenetic Data Analysis</title>
+      <link>/too2/new_geno/phylogenetic/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/too2/new_geno/phylogenetic/</guid>
+      <description>Table of Contents  Phylogenetic inference  MEGA ADAPTML  Phylogenetic Network Construction  CLC bio SPRDist  Discrete Character Evolution  CAFE DupliPHY  Tumor Progression  CT-CBN TRONCO  Tree Visualization  Dendroscope TreeKO  Find more tools: OMIVTOOLS   
+In biology, phylogenetics is the study of the evolutionary history and relationships among individuals or groups of organisms (e.g. species, or populations). These relationships are discovered through phylogenetic inference methods that evaluate observed heritable traits, such as DNA sequences or morphology under a model of evolution of these traits.</description>
+    </item>
+    
+  </channel>
+</rss>

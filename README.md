@@ -24,6 +24,6 @@ Contains：
 
 Design of the website could be found at the  [20180621_design.pdf](20180621_design.pdf), which contains the introduction of tools, tutorials and discussion of layout/theme.
 
-The website was built based on R blogdown+hugo with the same `academic` theme of another repository: [CityU_bioinformatics](https://github.com/sanka4rea/CityU_bioinformatics). I built the website with help of Miss Peiyu for her Final Year Project (FYP). From 2018-2020, I had been in charged of three undergraduate students' FYP. And again, it is not a part of science or research, just duties which be assigned to me. I have to say that the passed four-years of PhD did change me alot intentionally or unintentionally.
+The website was built based on R blogdown+hugo with the same `academic` theme of another repository: [CityU_bioinformatics](https://github.com/sanka4rea/CityU_bioinformatics). I built the website with help of Miss Peiyu for her Final Year Project (FYP). From 2018-2020, I had been assigned to in charge of three undergraduate students' FYP. And again, it is none of science or research, just duties which be assigned to me. I have to say that the passed four-years of PhD did change me alot intentionally or unintentionally.
 
-© 2020 · Copyright© 2020 Lin QI, Peiyu of Dr.Xin Wang's Lab. All rights reserved.
+© 2020 · Copyright© 2020 Lin QI, Peiyu. All rights reserved.
